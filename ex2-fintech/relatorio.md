@@ -20,7 +20,7 @@ Este relatório analisa o ambiente competitivo da NovaCred por meio das Cinco Fo
 
 - Três grupos de concorrentes disputam o mesmo espaço: bancos tradicionais (investindo em transformação digital), fintechs especializadas (nichos e inovação) e big techs (serviços financeiros dentro de ecossistemas já consolidados)
 - Produtos como conta digital e cartão sem anuidade são oferecidos por múltiplos players, comprimindo margens
-- O avanço do Open Finance fragmenta a fidelidade do cliente, que pode manter múltiplas contas e comparar ofertas com facilidade [FONTE NECESSÁRIA — dados sobre adoção do Open Finance no Brasil, 2025-2026]
+- O avanço do Open Finance fragmenta a fidelidade do cliente, que pode manter múltiplas contas e comparar ofertas com facilidade [1][2]
 - Bancos tradicionais investem pesado em nuvem e IA para reduzir a distância tecnológica em relação às fintechs
 
 **Papel do SI:**
@@ -40,7 +40,7 @@ Por outro lado, SI pode **mitigar** a rivalidade quando gera diferenciação dif
 **Evidências do cenário:**
 
 - Tecnologias como computação em nuvem, APIs abertas e modelos de Banking as a Service (BaaS) reduzem o custo inicial de criar uma fintech — não é mais necessário construir infraestrutura do zero
-- O setor financeiro exige conformidade regulatória rigorosa (Banco Central), segurança da informação e integração com instituições autorizadas, o que eleva a complexidade de entrada [FONTE NECESSÁRIA — regulamentação BCB sobre BaaS, adequação prevista até dez/2026]
+- O setor financeiro exige conformidade regulatória rigorosa (Banco Central), segurança da informação e integração com instituições autorizadas, o que eleva a complexidade de entrada [3][4]
 - Entrantes com grande base de dados e relacionamento (ex.: plataformas de ERP para MEIs) podem oferecer crédito contextualizado sem ser "banco", usando embedded finance
 - A confiança do consumidor em novos players financeiros ainda é uma barreira relevante
 
@@ -62,7 +62,7 @@ Ao mesmo tempo, SI **cria barreiras** quando a empresa acumula dados históricos
 
 - O público da NovaCred (jovens adultos e microempreendedores) valoriza rapidez, baixo custo e boa experiência no aplicativo — e compara ofertas com facilidade
 - Produtos financeiros digitais são padronizados aos olhos do usuário: conta digital, cartão sem anuidade e empréstimo online existem em várias empresas
-- A portabilidade de crédito digital e o Open Finance aumentam transparência e reduzem o custo de troca [FONTE NECESSÁRIA — portabilidade de crédito via Open Finance prevista para fev/2026, BCB]
+- A portabilidade de crédito digital e o Open Finance aumentam transparência e reduzem o custo de troca [5][6]
 - Se o aplicativo tem fricção, atendimento ruim ou tarifas piores, o cliente migra sem grandes perdas
 
 **Papel do SI:**
@@ -91,7 +91,7 @@ Para **mitigar**, a NovaCred deve usar SI para criar valor acumulativo que aumen
 
 SI **intensifica** essa dependência porque a operação totalmente digital significa que qualquer indisponibilidade de fornecedor impacta diretamente o cliente. Se o provedor de nuvem cai, o app sai do ar. Se a integração com a bandeira falha, o cartão não funciona.
 
-Para **mitigar**, a NovaCred precisa projetar seus sistemas com redundância e portabilidade: estratégia multicloud, uso de padrões abertos (ex.: Kubernetes para portabilidade de workloads), contratos com SLA bem definidos, APIs internas desacopladas dos fornecedores específicos, e planos de contingência testados. Também é importante diversificar fornecedores onde possível e monitorar concentração de dependência. [FONTE NECESSÁRIA — práticas de multicloud e FinOps em fintechs brasileiras]
+Para **mitigar**, a NovaCred precisa projetar seus sistemas com redundância e portabilidade: estratégia multicloud, uso de padrões abertos (ex.: Kubernetes para portabilidade de workloads), contratos com SLA bem definidos, APIs internas desacopladas dos fornecedores específicos, e planos de contingência testados. Também é importante diversificar fornecedores onde possível e monitorar concentração de dependência. [7][8]
 
 **Implicação estratégica:** A arquitetura de SI deve ser desenhada para **minimizar lock-in** e garantir continuidade operacional. Isso é uma decisão organizacional (governança de fornecedores) tanto quanto técnica.
 
@@ -103,8 +103,8 @@ Para **mitigar**, a NovaCred precisa projetar seus sistemas com redundância e p
 
 **Evidências do cenário:**
 
-- O Pix (inclusive por aproximação/NFC) substitui funções tradicionais de cartão de débito, reduzindo receita de intercâmbio [FONTE NECESSÁRIA — dados sobre impacto do Pix na receita de fintechs]
-- O Drex (real digital) e smart contracts podem substituir garantias bancárias tradicionais e automatizar colaterais [FONTE NECESSÁRIA — cronograma do Drex, BCB 2025-2026]
+- O Pix (inclusive por aproximação/NFC) substitui funções tradicionais de cartão de débito, reduzindo receita de intercâmbio [9][10]
+- O Drex (real digital) e smart contracts podem substituir garantias bancárias tradicionais e automatizar colaterais [11][12]
 - Portabilidade de crédito via Open Finance permite que clientes encontrem taxas melhores automaticamente
 - Big techs oferecem serviços financeiros integrados (pagamentos, crédito) dentro de plataformas que o usuário já habita
 - Plataformas de investimento independentes competem com a oferta simplificada da NovaCred
@@ -157,13 +157,28 @@ O Sistema de Informação da NovaCred não é apenas infraestrutura de suporte �
 
 ---
 
-## Fontes pendentes
+## Referências
 
-Os seguintes pontos do relatório requerem referências bibliográficas:
+[1] Finsiders Brasil. "Brasil lidera Open Finance no mundo com 100 milhões de clientes." Disponível em: https://finsidersbrasil.com.br/economia-open/brasil-lidera-open-finance-no-mundo-com-100-milhoes-de-clientes/
 
-1. Dados sobre adoção do Open Finance no Brasil (2025-2026)
-2. Regulamentação BCB sobre BaaS (adequação prevista até dez/2026)
-3. Portabilidade de crédito via Open Finance (previsão fev/2026, BCB)
-4. Práticas de multicloud e FinOps em fintechs brasileiras
-5. Impacto do Pix na receita de fintechs (dados de mercado)
-6. Cronograma oficial do Drex (BCB, 2025-2026)
+[2] Finsiders Brasil. "Open Finance já conecta 65 milhões de contas e movimenta R$ 12 bi por mês, diz BC." Disponível em: https://finsidersbrasil.com.br/regulamentacao/open-finance-ja-conecta-65-milhoes-de-contas-e-movimenta-r-12-bi-por-mes-diz-bc/
+
+[3] Demarest Advogados. "BC e CMN regulamentam Banking as a Service." Disponível em: https://www.demarest.com.br/bc-e-cmn-regulamentam-banking-as-a-service/
+
+[4] Banco Central do Brasil. Resolução Conjunta nº 16 — regulamentação de BaaS. Disponível em: https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20Conjunta&numero=16
+
+[5] Agência Brasil. "Portabilidade de crédito já pode ser feita de forma digital." Fev/2026. Disponível em: https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/portabilidade-de-credito-ja-pode-ser-feita-de-forma-digital
+
+[6] Sensedia. "Portabilidade de crédito no Open Finance com APIs." Disponível em: https://www.sensedia.com.br/post/portabilidade-de-credito-no-open-finance-com-apis
+
+[7] Dock. "Multicloud: estratégias para o setor financeiro." Disponível em: https://dock.tech/fluid/blog/tecnologia/multicloud/
+
+[8] Pise4. "Cloud 2026: as principais tendências que vão redesenhar a arquitetura multicloud." Disponível em: https://pise4.com.br/cloud-2026-as-principais-tendencias-que-vao-redesenhar-a-arquitetura-multicloud/
+
+[9] Finsiders Brasil. "Pix por aproximação faz um ano com números tímidos e trava da Apple." Disponível em: https://finsidersbrasil.com.br/reportagem-exclusiva-fintechs/pix-por-aproximacao-faz-um-ano-com-numeros-timidos-e-trava-da-apple/
+
+[10] E-Investidor / Estadão. "Pix em 2026: novas funcionalidades, regras de segurança e aproximação." Disponível em: https://einvestidor.estadao.com.br/educacao-financeira/pix-em-2026-novas-funcionalidades-regras-seguranca-aproximacao-futuro/
+
+[11] Banco Central do Brasil. "Real Digital (Drex)." Disponível em: https://www.bcb.gov.br/estabilidadefinanceira/real_digital
+
+[12] Febraban Tech. "Terceira fase do Drex terá foco em garantias de operações de crédito, anuncia BC." Disponível em: https://febrabantech.febraban.org.br/temas/blockchain/terceira-fase-do-drex-tera-foco-em-garantias-de-operacoes-de-credito-anuncia-bc
