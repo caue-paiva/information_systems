@@ -53,7 +53,7 @@ Há ainda um fator organizacional relevante: embora bancos tradicionais invistam
 
 **Evidências do cenário:**
 
-- Tecnologias como computação em nuvem, APIs abertas e modelos de Banking as a Service (BaaS) reduzem o custo inicial de criar uma fintech, pois não é mais necessário construir infraestrutura do zero
+- Tecnologias como computação em nuvem, APIs abertas e modelos de BaaS (Banking as a Service, ou banco como serviço) reduzem o custo inicial de criar uma fintech, pois não é mais necessário construir infraestrutura do zero
 - O setor financeiro exige conformidade regulatória rigorosa (Banco Central), segurança da informação e integração com instituições autorizadas, o que eleva a complexidade de entrada [3][4]
 - Entrantes com grande base de dados e relacionamento (ex.: plataformas de ERP para MEIs) podem oferecer crédito contextualizado sem ser "banco", usando embedded finance
 - A confiança do consumidor em novos players financeiros ainda é uma barreira relevante
@@ -87,7 +87,7 @@ Para **mitigar**, a NovaCred deve usar SI para criar valor acumulativo que aumen
 
 Aqui é importante distinguir o papel de cada nível: a NovaCred coleta **dados** brutos (transações, horários de acesso, valores de Pix recebidos). Esses dados só se tornam **informação** quando processados em contexto, e é justamente o SI que viabiliza essa transformação, ao organizar, cruzar e contextualizar os dados por meio de seus processos, pessoas e tecnologia. Por exemplo, identificar que um MEI com recebimentos regulares via Pix tem fluxo de caixa estável e portanto menor risco de inadimplência. E se tornam **conhecimento** organizacional quando alimentam modelos de crédito que se refinam continuamente com cada decisão e seu resultado. Esse acúmulo de conhecimento é o que gera switching cost real: o cliente que migra para outro serviço perde essa "inteligência" construída sobre seu perfil.
 
-**Implicação estratégica:** O desafio não é adquirir clientes (CAC), mas retê-los (LTV). SI deve transformar o app em uma ferramenta que o cliente não quer abandonar porque perderia conveniência e histórico acumulado.
+**Implicação estratégica:** O desafio não é adquirir clientes (CAC, Custo de Aquisição de Cliente), mas retê-los (LTV, Lifetime Value, ou valor do cliente ao longo do tempo). SI deve transformar o app em uma ferramenta que o cliente não quer abandonar porque perderia conveniência e histórico acumulado.
 
 ---
 
@@ -107,7 +107,7 @@ Aqui é importante distinguir o papel de cada nível: a NovaCred coleta **dados*
 
 SI **intensifica** essa dependência porque a operação totalmente digital significa que qualquer indisponibilidade de fornecedor impacta diretamente o cliente. Se o provedor de nuvem cai, o app sai do ar. Se a integração com a bandeira falha, o cartão não funciona.
 
-Para **mitigar**, a NovaCred precisa projetar seus sistemas com redundância e portabilidade: estratégia multicloud, uso de padrões abertos (ex.: Kubernetes para portabilidade de workloads), contratos com SLA bem definidos, APIs internas desacopladas dos fornecedores específicos, e planos de contingência testados. Também é importante diversificar fornecedores onde possível e monitorar concentração de dependência. [7][8]
+Para **mitigar**, a NovaCred precisa projetar seus sistemas com redundância e portabilidade: estratégia multicloud, uso de padrões abertos (ex.: Kubernetes para portabilidade de workloads), contratos com SLA (Service Level Agreement, ou acordo de nível de serviço) bem definidos, APIs internas desacopladas dos fornecedores específicos, e planos de contingência testados. Também é importante diversificar fornecedores onde possível e monitorar concentração de dependência. [7][8]
 
 **Implicação estratégica:** A arquitetura de SI deve ser desenhada para **minimizar lock-in** e garantir continuidade operacional. Isso é uma decisão organizacional (governança de fornecedores) tanto quanto técnica.
 
