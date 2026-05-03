@@ -1,0 +1,241 @@
+Cadeia de Valor: o que é, como funciona e dicas para implementar
+Imagem de relógio para tempo de leitura.
+Tempo de leitura: 13 minutos
+
+
+Escrito por Equipe TOTVS
+Última atualização em 24 novembro, 2023
+A análise da cadeia de valor é uma forma de dividir a logística, as operações e a infraestrutura da empresa, revelando o verdadeiro valor do seu produto ou serviço.
+
+Como cada setor interage entre si? Como as tarefas são executadas? Cada operação visa agregar valor ao cliente?
+
+Esse é um conhecimento essencial hoje em dia, visto que possibilita que você potencialize seus lucros e atraia novos clientes a partir da compreensão sobre os processos empresariais.
+
+Por isso, vamos explicar tudo que você precisa aprender sobre cadeira de valor: o que é, qual o seu objetivo e os componentes, as vantagens e muito mais!
+
+E então, preparado(a)? Continue a leitura para seguir aprendendo!
+
+O que significa cadeia de valor?
+A cadeia de valor (ou cadeia de valor de Porter) é um método que permite à empresa organizar todos os seus processos, observando os elos e como cada um deles pode gerar valor ao cliente. 
+
+Em outras palavras, ela permite que a organização entenda seu próprio funcionamento e a prática dos seus processos produtivos e estratégicos.
+
+Vamos analisar a fundo, veja bem:
+
+Um produto (ou mesmo um serviço) passa por muitos processos antes de chegar até o consumidor final. 
+
+Não se trata apenas de transformar a matéria-prima em outra coisa, e sim de saber agregar valor em cada uma das etapas desse processo.
+
+É a isso que damos o nome de cadeia de valor de Porter. Esse nome vem de Michael Eugene Porter, professor de Harvard, que criou o conceito. 
+
+Ele o apresentou no livro “Competitive Advantage” em um fluxograma das etapas essenciais para agregar valor ao produto final de uma empresa.
+
+Dessa forma, fica claro que a maneira como a cadeia é organizada é capaz de afetar os custos e os lucros da companhia. Veremos com mais detalhes adiante.
+
+Qual é o objetivo da cadeia de valor?
+objetivo da cadeia de valor
+A cadeia de valor possibilita que a empresa entenda como funciona a organização e a prática dos seus processos produtivos e estratégicos.
+
+É uma ferramenta que reflete diretamente o funcionamento e aborda todas as nuances do negócio.
+
+Essa visão abrangente, que mostra processos primários, de apoio e de gestão, serve como campo de análise para os gestores. Assim, é possível trabalhar em cima de melhorias que fortaleçam a entrega de valor para os clientes.
+
+De forma objetiva, esta cadeia contribui para que a organização se atenha à sua própria proposta de valor.
+
+Como?
+
+Ao expandir os macro e microprocessos, permitindo uma análise qualificada das forças, oportunidades, fraquezas e ameaças.
+
+Através desse processo analítico, a empresa então consegue insumos para trabalhar em cima de seus diferenciais, melhorando a percepção dos clientes.
+
+É uma ação estratégica essencial, que pode trazer ótimos resultados, como crescimento e maior lucratividade.
+
+A cadeia de valor segundo Porter
+A cadeia de valor de Porter, como também é conhecida, é um modelo de estruturação das atividades desenvolvidas pelas empresas.
+
+A premissa era que se o valor que uma empresa estava oferecendo aos seus clientes superasse o custo de produção, o resultado seria um lucro maior.
+
+Ou seja, podemos criar uma fórmula:
+
+Valor Criado – Custo de Criar esse Valor = Margem de Lucro
+
+De acordo com Porter, as empresas podem aumentar seus lucros usando a análise da cadeia de valor de duas maneiras diferentes:
+
+Liderança de custos: cortar gastos de produção e simplificar processos para aumentar a lucratividade.
+Diferenciação competitiva: aumentar o preço ao oferecer um serviço exclusivo, diferenciado ou de alto valor para o cliente.
+Ou seja, há dois caminhos segundo o especialista:
+
+Imagina uma empresa do agronegócio.
+
+Ela pode aumentar o valor das suas entregas e ganhar vantagem competitiva ao cortar custos de contratação e reduzir investimentos na produção.
+
+No entanto, ela pode alcançar o mesmo resultado por outro caminho por meio do ganho de qualidade em cima do seu produto — criando versões orgânicas, por exemplo.
+
+Assim, ela cria mais valor, possibilitando que o preço seja maior que os custos, naturalmente.
+
+No primeiro caso, essa lógica funciona pela redução de custos processuais internos. Já na segunda, acontece o inverso, pois a maior qualidade permite que se exija um preço mais alto. 
+
+De forma simples: ambos os métodos levam a um aumento na margem de lucro.
+
+Esse modelo tem como objetivo atingir a máxima qualidade do serviço e/ou produto, até chegar ao consumidor final.
+
+Trata-se de uma representação visual, lógica e sistemática da operação da empresa.
+
+Agora você já sabe a base sobre a cadeia de valor, o que é e seu objetivo principal. Para compreendê-la melhor, é preciso conhecer os seus componentes.
+
+Quais são os componentes de uma cadeia de valor?
+Michael Porter definiu uma cadeia de atividades que são comuns nas empresas. Com isso, fez uma divisão entre atividades primárias e atividades de suporte. 
+
+Entenda!
+
+
+Atividades Primárias
+As atividades primárias são aquelas que, de forma direta, geram valor para os clientes.
+
+É comum chamá-los de “processos core”, pois estão relacionados com a entrega de valor.
+
+Entre as atividades primárias, podemos citar:
+
+Logística de entrada: relacionada a processos como recebimento, controle de inventário e marcação de transporte. Neste ponto, o que mais gera valor é a relação com os fornecedores, o que inclui boas parcerias, bons contratos e processo de compras otimizado.
+Operações: envolvem maquinário, embalagens, montagem, manutenção de máquinas, testes e outros processos. Em uma indústria, seria o equivalente ao chão de fábrica. Neste caso, a criação de valor está na transformação de matéria-prima no produto final e na automação industrial.
+Logística Externa (logística de saída): são as atividades de entrega de produtos para os consumidores, como sistema de recolha, armazenamento, distribuição etc. Envolve não só viabilizar a logística, mas garantir sua qualidade, integridade e o cumprimento do prazo.
+Marketing e vendas: é a atração de consumidores finais para a compra e inclui todas as frentes de comunicação, como o inbound e o outbound marketing. Ferramentas e sistemas que potencializam essas execuções podem reforçar as entregas e possibilitar que você conheça as características e necessidades dos clientes, estreitando laços de relacionamento.
+Serviços: é todo o suporte durante e após a compra concretizada, incluindo instalação, reparos e demais atividades que complementam esta etapa. Muitas empresas adotam, neste aspecto, a servitização (venda de soluções “as a service”). Em vez de entregar apenas produtos, preferem transformá-los em serviços, como a Microsoft e seus contratos por assinatura. 
+Após conhecer a cadeia de valor e as atividades primárias, vamos às atividades de apoio.
+
+Atividades de apoio
+cadeia de valor: atividades de apoio
+Como o nome sugere, as atividades de apoio servem de auxílio para as primárias. Logo, elas geram valor de forma indireta. São elas:
+
+Infraestrutura: atividades como gestão geral, administrativa, legal, financeira, contabilística, entre outras, fazem parte da infraestrutura. São sistemas que ajudam a empresa a manter as suas operações diárias, controlando sua saúde financeira.
+Aquisição e compras: este setor é responsável por adquirir os materiais necessários para o desenvolvimento dos trabalhos. Seu valor está na busca, na negociação e na gestão dos fornecedores, bem como na procura por máquinas de qualidade com um bom preço.
+Gestão de Recursos Humanos: são as boas práticas para gerir o capital humano. As atividades variam desde recrutamento e treinamentos até compensação de funcionários. Isso garante que os processos de seleção sejam eficientes e as estratégias de engajamento mantenham o time estimulado.
+Desenvolvimento tecnológico: atua para manter as atividades funcionando conforme os padrões e melhorar a produtividade do time. É onde ocorre a investigação e desenvolvimento (I&D), automação de processos, design, entre outras áreas. Estratégias que agregam valor também podem ser incluídas, como manufatura lean.
+Quais são as vantagens de implementar a cadeia de valor em sua empresa?
+O modelo da cadeia de valor permite uma visão ampla e sistêmica do fluxo de trabalho em sua organização.
+
+É uma ferramenta que serve de base para você gerenciar operações e recursos, conquistando vantagens como:
+
+Identificar melhorias no seu negócio
+O que prejudica seu processo produtivo? O que impede sua empresa de decolar?
+
+Com uma cadeia de valor bem estruturada é possível mergulhar no ecossistema organizacional produtivo para encontrar as respostas.
+
+Trata-se de uma ferramenta que potencializa seu poder analítico, possibilitando encontrar falhas e oportunidades de melhoria.
+
+Com isso, você não age baseado puramente de forma holística.
+
+Ao contrário, baseado em dados e na análise minuciosa de processos, entende quais mudanças efetuar.
+
+Otimizar e agilizar a execução das demandas
+Ao “passar uma lupa” em todo fluxo de trabalho, você tem a oportunidade de otimizar as atividades realizadas.
+
+É uma forma de criar processos mais fluidos, identificando aqueles que realmente geram valor para o cliente — e outros que apenas atrasam a organização, como as tarefas repetitivas.
+
+Esse insight é interessante pois possibilita que você e seu time entendam como a agilidade operacional é afetada, assim, podem buscar na tecnologia as soluções adequadas.
+
+Um exemplo é o ERP, sistema de gestão completo para o backoffice do negócio, que agiliza várias atividades administrativas e integra dados, facilitando o trabalho de vários setores.
+
+Nova call to action
+Gerar maior vantagem competitiva
+Essa foi uma tecla batida durante o conteúdo, pois é um dos pontos fortes da ferramenta de cadeia de valor.
+
+Ao utilizá-la, é possível observar de forma objetiva o que sua empresa faz bem e o que ela faz mal. Afinal, é impossível manter um processo produtivo perfeito e sem falhas.
+
+Essa é uma busca diária — e que esse método ajuda a contemplar.
+
+Assim, é possível utilizar a cadeia de valor para observar oportunidades em relação aos concorrentes e ao mercado, explorando vantagens competitivas que colocam sua empresa à frente da concorrência.
+
+Auxiliar no planejamento estratégico
+Ao entender o estado atual do seu fluxo de trabalho, é possível ter mais controle sobre as ações do futuro.
+
+Ou seja, você complementa o seu planejamento estratégico, indicando processos que necessitem de reestruturação, melhorias ou investimentos.
+
+Afinal, a cadeia de valor serve também como um mapa, concorda?
+
+Ele te dá as coordenadas do seu negócio diante do mercado e dos clientes, mostrando de forma prática como seus processos influenciam em sua percepção de valor.
+
+Com base nessas informações, é possível traçar melhores, mais eficazes e assertivas estratégias para melhorar processos e entregas, maximizando os resultados.
+
+Como implementar a cadeia de valor em sua organização?
+A análise da cadeia de valor permite que a necessidade de melhorias em alguns setores seja identificada. Para entender melhor sua aplicação, veja as dicas a seguir.
+
+Mapear as atividades primárias
+O primeiro passo do mapeamento da cadeia de valor é identificar as sub-atividades de cada atividade primária.
+
+Assim, é possível entender a estrutura geral do seu negócio, a fim de determinar quais dessas atividades geram valor real.
+
+Nesse passo, é importante lembrar que existem diferentes tipos de subcategorias:
+
+Atividades diretas: criam valor próprio;
+Atividades indiretas: permitem que as diretas funcionem perfeitamente;
+Atividades de garantia de qualidade: asseguram que ambas atividades sigam padrões.
+Mapear as atividades de apoio 
+Aqui é preciso identificar as subatividades para cada atividade de apoio.
+
+Um exemplo disso, é analisar como o RH pode criar valor na área de logística de entrada, operações, etc.
+
+Deve-se identificar também as atividades que geram valor para a infraestrutura do seu negócio.
+
+Encontrar conexões
+cadeia de valor: encontrar conexões
+O próximo passo é conseguir encontrar conexões entre todas as atividades de valor que foram identificadas no processo.
+
+Essas ligações são parte importante no aumento da vantagem competitiva.
+
+E atenção: as conexões precisam existir! Só assim é possível ter sob controle um fluxo de trabalho dinâmico e funcional.
+
+Aplicar melhorias
+Após identificar as conexões e as subatividades, é chegada a hora de fazer as melhorias.
+
+Isso exigirá muitas mudanças, como a implementação de um software de gestão, de soluções de automação de processos, ferramentas de marketing, etc.
+
+Será uma etapa de muita mão na massa, mas também será essencial para aprimorar os processos internos e gerar ainda mais valor.
+
+Percebe como o mapeamento da cadeia de valor pode ser um processo trabalhoso? 
+
+Um sistema de gestão empresarial pode ser de grande ajuda. É uma solução que se adequa às necessidades da sua empresa, além de auxiliar na gestão e organização.
+
+É o caso do ERP da TOTVS!
+
+ERP da TOTVS
+O ERP da TOTVS permite o controle total das atividades administrativas/financeiras e integra seu negócio de ponta a ponta, permitindo uma maior colaboração entre as áreas da sua empresa e uma melhor gestão do time. 
+
+É uma solução completa, robusta e desenvolvida para realmente funcionar como um backoffice do seu negócio.
+
+Assim, você automatiza tarefas e torna as entregas do time administrativo e pessoal ainda mais ágil.
+
+Dessa forma, possibilita que foquem na geração de valor direto aos clientes, permitindo que a carga operacional saia de seus ombros.
+
+Com o ERP da TOTVS você tem isso.
+
+Ainda na dúvida se o ERP é a melhor solução para sua empresa? Confira o vídeo a seguir para tirar suas dúvidas!
+
+
+Que tal conferir mais da solução completa, que atende empresas de todos os segmentos e tamanhos? 
+
+Conheça todas as funcionalidades do ERP da TOTVS!
+
+Conclusão
+Para conquistar melhores resultados, o primeiro passo é olhar para dentro: o que você faz, como faz, por que faz e o mais importante: como melhorar isso tudo?
+
+Ao entender mais sobre o conceito de cadeia de valor, esperamos que você possa aplicar a metodologia em seu negócio.
+
+É um método poderoso para entender como sua organização se posiciona no mercado e, especialmente, como é percebida pelos clientes.
+
+Assim, pode observar os pontos fortes e fracos e encontrar as oportunidades de melhoria, que vão possibilitar uma melhor entrega de valor ao consumidor final.
+
+A cadeia de valor abre seus olhos para tudo que envolve o fluxo de trabalho da empresa, seja no braço estratégico como operacional.
+
+Dessa forma, facilita a criação de estratégias eficazes, inovadoras e aperfeiçoadas, capazes de elevar o patamar da sua organização!
+
+Continue a leitura conferindo nosso artigo sobre os impactos da logística 4.0 nas operações.
+
+
+Posts em destaque
+
+Controle de estoque: como fazer, evitar erros e otimizar sua gest...
+
+
+O que é giro de estoque, como calcular e dicas para gerenciá-lo...
+
