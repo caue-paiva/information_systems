@@ -1,3 +1,5 @@
+
+
 # Análise Estratégica e Tecnológica da NovaCred (2025–2026)
 
 O sistema financeiro (especialmente no Brasil) passa por uma transformação em que a tecnologia deixa de ser “suporte operacional” e se torna base da estratégia. A **NovaCred**, fintech com **5 anos** de operação, representa essa transição ao competir com bancos tradicionais por meio de uma operação **nativa digital**, intensiva em dados e algoritmos.

@@ -1,3 +1,13 @@
+# Exércicio 2 (NovaCred) da máteria SSC0120 - Sistemas de Informação
+
+Feito por:
+
+Cauê Paiva Lira - 14675416
+
+Letícia Barbosa Neves - 14588659
+
+Pedro Lucas Figueiredo Bahiense - 14675458
+
 # Análise das Cinco Forças de Porter — NovaCred
 
 ## 1. Introdução
