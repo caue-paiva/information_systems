@@ -8,6 +8,8 @@ Letícia Barbosa Neves - 14588659
 
 Pedro Lucas Figueiredo Bahiense - 14675458
 
+João Pedro Alves Notari Godoy - 14582076
+
 # Análise das Cinco Forças de Porter — NovaCred
 
 ## 1. Introdução
