@@ -128,7 +128,7 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 **O que é:** utilizar a combinação de dados internos (transações, comportamento no app) com dados externos (Open Finance) para oferecer a cada cliente produtos e condições ajustados ao seu momento de vida, de forma automatizada e contínua.
 
-**Conexão com a Cadeia de Valor:** essa estratégia integra três atividades: a logística interna (captação e integração de dados de múltiplas fontes), as operações (modelos de IA que transformam dados em decisões de crédito e recomendações) e o marketing/vendas (ofertas personalizadas entregues no momento certo).
+**Conexão com a Cadeia de Valor:** essa estratégia integra duas atividades primárias: as operações (modelos de IA que transformam dados em decisões de crédito e recomendações) e o marketing/vendas (ofertas personalizadas entregues no momento certo), apoiadas pelo desenvolvimento tecnológico (refinamento contínuo dos modelos com dados acumulados).
 
 **Conexão com Porter:** a hiperpersonalização mitiga a rivalidade ao criar diferenciação difícil de copiar (não basta ter os mesmos produtos, é preciso ter os mesmos dados e modelos calibrados). Também mitiga o poder de barganha dos clientes ao gerar switching cost por valor acumulado, pois quanto mais o cliente usa a plataforma, mais preciso o serviço se torna, e migrar para outro player significa perder essa "inteligência" construída sobre seu perfil.
 
@@ -146,7 +146,7 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 **Conexão com Porter:** mitiga a ameaça de substitutos ao oferecer uma jornada integrada que nenhum produto isolado (Pix, plataforma de investimento, app de gestão) consegue replicar sozinho. Também cria barreiras contra novos entrantes, pois os dados acumulados sobre o comportamento financeiro dos MEIs ao longo dos cinco anos de operação da NovaCred são um ativo que um entrante novo não possui.
 
-**Como o SI sustenta:** o SI integra dados de recebimentos via Pix, pagamentos com cartão, histórico de crédito e padrões sazonais do negócio para gerar informação acionável (por exemplo, identificar que o faturamento do MEI cai em janeiro e oferecer capital de giro preventivo). A arquitetura em microsserviços permite adicionar novas funcionalidades de gestão sem redesenhar o sistema. O atendimento automatizado (chatbots, alertas inteligentes) reduz o custo de suportar essa base de clientes com margens menores.
+**Como o SI sustenta:** o SI integra dados de recebimentos via Pix, pagamentos com cartão, histórico de crédito e padrões sazonais do negócio para gerar informação acionável (por exemplo, identificar que o faturamento do MEI cai em janeiro e oferecer capital de giro preventivo). O atendimento automatizado (alertas inteligentes, notificações de fluxo de caixa) reduz o custo de suportar essa base de clientes com margens menores.
 
 **Riscos e trade-offs:** o principal risco é de escopo. Tentar ser "tudo para o MEI" (conta, crédito, gestão, pagamentos, contabilidade) pode diluir o foco e aumentar a complexidade operacional, elevando custos de desenvolvimento e suporte. A NovaCred precisa definir até onde vai e o que é melhor resolvido por parceiros via integração. Além disso, parte dos dados usados para contextualizar o crédito do MEI vem de terceiros via Open Finance, cujo acesso depende de regulação que pode mudar. Se o Banco Central alterar as regras de compartilhamento, a base de dados da estratégia pode ser comprometida.
 
@@ -154,9 +154,9 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 ## 3. Considerações Finais
 
-A análise da Cadeia de Valor revela que o SI da NovaCred não é uma camada de suporte isolada, mas o elemento que conecta e potencializa todas as atividades da empresa. Desde a captação de dados (logística interna) até o atendimento pós-venda (serviços), passando pela análise de crédito automatizada (operações) e pela personalização de ofertas (marketing), cada elo da cadeia depende do SI para funcionar e gerar valor.
+A análise da Cadeia de Valor revela que o SI da NovaCred não é uma camada de suporte isolada, mas o elemento que conecta e potencializa todas as atividades da empresa. Desde a oferta dos produtos financeiros (operações) até o atendimento pós-venda (serviços), passando pela distribuição via app (canais) e pela personalização de ofertas (marketing/vendas), cada elo da cadeia depende do SI para funcionar e gerar valor.
 
-As duas estratégias propostas, hiperpersonalização e plataforma para MEIs, são viáveis justamente porque a NovaCred já possui as atividades de apoio necessárias: infraestrutura em nuvem escalável, equipes com cultura ágil, desenvolvimento tecnológico baseado em microsserviços e gestão de fornecedores diversificada. Isso não seria possível em uma organização que tratasse SI apenas como "o sistema que roda no computador".
+As duas estratégias propostas, hiperpersonalização e plataforma para MEIs, são viáveis justamente porque a NovaCred já possui as atividades de apoio necessárias: infraestrutura com governança de dados, equipes com cultura ágil, desenvolvimento tecnológico com modelos de IA que se refinam continuamente e gestão estruturada de fornecedores. Isso não seria possível em uma organização que tratasse SI apenas como "o sistema que roda no computador".
 
 Para que essas estratégias se concretizem, é necessário atenção às três dimensões do SI como sistema sociotécnico:
 
