@@ -88,7 +88,7 @@ A infraestrutura da NovaCred inclui sua arquitetura de computação em nuvem, po
 
 **Como agrega valor:** garante que todos os serviços funcionem com disponibilidade, segurança e conformidade. Sem infraestrutura confiável, nenhum produto digital funciona.
 
-**Papel do SI:** a empresa utiliza estratégia multicloud (múltiplos provedores de nuvem) para evitar dependência de um único fornecedor e garantir continuidade operacional. Políticas de segurança Zero Trust protegem cada chamada de API individualmente. A governança de dados atende às exigências do Banco Central e da LGPD. Práticas de FinOps (gestão financeira da nuvem) otimizam custos ao evitar recursos ociosos.
+**Papel do SI:** como a operação é 100% digital, a infraestrutura de TI é a própria infraestrutura do negócio. A empresa opera em nuvem com políticas de segurança que protegem cada chamada de API individualmente, e a governança de dados atende às exigências do Banco Central e da LGPD. Para uma fintech desse porte, práticas de gestão financeira da nuvem são essenciais para evitar desperdício de recursos. A NovaCred poderia ainda adotar estratégias como multicloud e padrões abertos para reduzir dependência de um único fornecedor e ampliar resiliência operacional.
 
 **Tipo de ganho:** redução de risco (conformidade, segurança, continuidade), redução de custo (FinOps evita desperdício).
 
@@ -100,7 +100,7 @@ A NovaCred possui equipes de desenvolvimento de software, análise de dados, mar
 
 **Como agrega valor:** equipes especializadas garantem a qualidade dos produtos e a velocidade de inovação. A cultura ágil permite responder rapidamente a mudanças regulatórias e competitivas.
 
-**Papel do SI:** ferramentas de colaboração e gestão de projetos sustentam o trabalho distribuído. A automação de tarefas repetitivas libera profissionais para atividades analíticas e estratégicas. A ausência de legado organizacional (diferente dos bancos tradicionais, que enfrentam resistência à mudança em estruturas hierárquicas rígidas) permite que novas tecnologias e processos sejam adotados com menor atrito.
+**Papel do SI:** a automação de tarefas repetitivas (conciliação, validação documental) libera profissionais para atividades analíticas e estratégicas. A ausência de legado organizacional, diferente dos bancos tradicionais que enfrentam resistência à mudança em estruturas hierárquicas rígidas, permite que novas tecnologias e processos sejam adotados com menor atrito. Isso exige, porém, investimento contínuo em treinamento para que as equipes acompanhem a evolução das ferramentas de IA, dados e segurança que sustentam a operação.
 
 **Tipo de ganho:** diferenciação (agilidade organizacional superior à de concorrentes com legado).
 
@@ -124,7 +124,7 @@ A NovaCred depende de parceiros externos críticos: provedores de nuvem, bandeir
 
 **Como agrega valor:** a gestão adequada desses relacionamentos garante a continuidade e a qualidade dos serviços oferecidos ao cliente final.
 
-**Papel do SI:** APIs desacopladas permitem trocar ou adicionar fornecedores com menor impacto na operação. O monitoramento automatizado dos SLAs (Service Level Agreements, ou acordos de nível de serviço) de cada parceiro permite identificar problemas antes que afetem o cliente. A estratégia multicloud e o uso de padrões abertos (como Kubernetes) reduzem o risco de lock-in tecnológico.
+**Papel do SI:** a integração com parceiros é feita via APIs, o que permite que mudanças de fornecedor tenham menor impacto na operação. Sistemas de monitoramento acompanham os SLAs (Service Level Agreements, ou acordos de nível de serviço) de cada parceiro, identificando degradações antes que afetem o cliente final. Para reduzir o risco de lock-in tecnológico, a NovaCred poderia adotar padrões abertos que facilitem a portabilidade entre provedores.
 
 **Tipo de ganho:** redução de risco (diversificação de fornecedores, contingência), coordenação/integração (APIs padronizadas facilitam gestão de múltiplos parceiros).
 
@@ -144,6 +144,8 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 **Como o SI sustenta:** o SI viabiliza toda a cadeia dado → informação → conhecimento. Dados brutos de transações são transformados em informação contextualizada (padrões de consumo, risco de inadimplência, sazonalidade do faturamento do MEI) e, ao longo do tempo, em conhecimento organizacional incorporado nos modelos de IA. Sem o SI integrando processos, pessoas e tecnologia, esses dados permaneceriam fragmentos isolados sem utilidade para decisão.
 
+**Riscos e trade-offs:** acumular mais dados do cliente para personalização aumenta a superfície de ataque e a responsabilidade sob a LGPD, exigindo investimento contínuo em segurança e conformidade. Há também o risco de viés algorítmico: modelos de IA treinados com dados históricos podem reproduzir padrões de exclusão em vez de incluir perfis subatendidos, o que contraria a proposta de valor da NovaCred. Por fim, manter a infraestrutura de dados integrados (Open Finance + dados internos + modelos de IA) tem custo operacional significativo que precisa ser justificado pelo retorno em retenção e conversão.
+
 ---
 
 ### Estratégia 2: Plataforma integrada de gestão financeira para MEIs
@@ -155,6 +157,8 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 **Conexão com Porter:** mitiga a ameaça de substitutos ao oferecer uma jornada integrada que nenhum produto isolado (Pix, plataforma de investimento, app de gestão) consegue replicar sozinho. Também cria barreiras contra novos entrantes, pois os dados acumulados sobre o comportamento financeiro dos MEIs ao longo dos cinco anos de operação da NovaCred são um ativo que um entrante novo não possui.
 
 **Como o SI sustenta:** o SI integra dados de recebimentos via Pix, pagamentos com cartão, histórico de crédito e padrões sazonais do negócio para gerar informação acionável (por exemplo, identificar que o faturamento do MEI cai em janeiro e oferecer capital de giro preventivo). A arquitetura em microsserviços permite adicionar novas funcionalidades de gestão sem redesenhar o sistema. O atendimento automatizado (chatbots, alertas inteligentes) reduz o custo de suportar essa base de clientes com margens menores.
+
+**Riscos e trade-offs:** o principal risco é de escopo. Tentar ser "tudo para o MEI" (conta, crédito, gestão, pagamentos, contabilidade) pode diluir o foco e aumentar a complexidade operacional, elevando custos de desenvolvimento e suporte. A NovaCred precisa definir até onde vai e o que é melhor resolvido por parceiros via integração. Além disso, parte dos dados usados para contextualizar o crédito do MEI vem de terceiros via Open Finance, cujo acesso depende de regulação que pode mudar. Se o Banco Central alterar as regras de compartilhamento, a base de dados da estratégia pode ser comprometida.
 
 ---
 
