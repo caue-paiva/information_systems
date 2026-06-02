@@ -16,67 +16,69 @@ João Pedro Alves Notari Godoy - 14582076
 
 ## 1. Cadeia de Valor
 
-A Cadeia de Valor de Porter permite identificar onde a NovaCred gera valor para seus clientes e onde os Sistemas de Informação contribuem para eficiência ou diferenciação. A seguir, analisamos as atividades primárias e de apoio da empresa, indicando em cada uma o tipo de ganho obtido.
+A NovaCred é uma empresa de serviços financeiros digitais. Seus produtos principais são: conta digital, cartão de crédito sem anuidade, empréstimos pessoais com análise automatizada e uma plataforma de investimentos simplificada. Toda a operação acontece online, sustentada por inteligência artificial para análise de crédito, big data para personalização e aplicativos móveis como canal de relacionamento. Seu público prioritário são jovens adultos e microempreendedores.
+
+A Cadeia de Valor de Porter permite identificar onde a NovaCred gera valor ao entregar esses produtos financeiros aos seus clientes e onde os Sistemas de Informação contribuem para eficiência ou diferenciação em cada etapa. A seguir, analisamos as atividades primárias e de apoio da empresa, indicando em cada uma o tipo de ganho obtido.
 
 ### 1.1 Atividades Primárias
 
-#### Logística Interna (captação e integração de dados)
+#### Logística Interna (captação de dados financeiros e cadastrais)
 
-Na NovaCred, a logística interna corresponde à captação, integração e preparação dos dados que alimentam toda a operação. Como a empresa opera 100% online, seus "insumos" não são matérias-primas físicas, mas dados: transações financeiras, informações cadastrais, dados comportamentais do aplicativo e, cada vez mais, dados compartilhados via Open Finance.
+Para oferecer conta digital, cartão de crédito, empréstimos e investimentos, a NovaCred precisa primeiro reunir os insumos que sustentam esses produtos: dados. Diferente de uma empresa industrial cujos insumos são matérias-primas, os insumos de uma fintech são dados financeiros e cadastrais do cliente, como renda, histórico de pagamentos, movimentações bancárias, dados comportamentais no aplicativo e, cada vez mais, dados compartilhados por outras instituições via Open Finance.
 
-**Como agrega valor:** a qualidade dos dados de entrada determina a qualidade de todas as decisões posteriores, desde a análise de crédito até a personalização de ofertas. Dados bem integrados reduzem erros e permitem decisões mais rápidas.
+**Como agrega valor:** a qualidade desses dados determina a qualidade de todos os produtos que a NovaCred entrega. Um empréstimo com taxa justa depende de uma boa análise de risco. Uma recomendação de investimento relevante depende de conhecer o perfil do cliente. Dados bem integrados significam decisões melhores para o cliente em todos os produtos.
 
-**Papel do SI:** o SI é responsável por coletar dados de múltiplas fontes (APIs do Open Finance, registros internos, dados de parceiros), organizá-los e garantir sua consistência. Ferramentas de Big Data permitem processar grandes volumes com velocidade, enquanto políticas de governança de dados asseguram rastreabilidade e conformidade com as exigências do Banco Central.
+**Papel do SI:** o SI coleta dados de múltiplas fontes (APIs do Open Finance, registros internos de transações, dados de parceiros financeiros), organiza-os e garante sua consistência. Ferramentas de Big Data permitem processar grandes volumes com velocidade, enquanto políticas de governança de dados asseguram rastreabilidade e conformidade com as exigências do Banco Central.
 
-**Tipo de ganho:** qualidade/tempo (dados prontos para uso mais rápido), redução de risco (governança previne inconsistências e falhas regulatórias).
-
----
-
-#### Operações (processamento e decisão)
-
-As operações são o núcleo da NovaCred: é onde ocorre a análise automatizada de crédito via inteligência artificial, o processamento de transações financeiras em tempo real e a automação de tarefas repetitivas como conciliação e validação de documentos no onboarding.
-
-**Como agrega valor:** o cliente recebe uma resposta de crédito em minutos (não em dias, como em bancos tradicionais). As transações são processadas instantaneamente. A automação reduz erros humanos e libera equipes para atividades de maior valor.
-
-**Papel do SI:** a arquitetura em microsserviços permite escalar cada função de negócio de forma independente (o serviço de crédito pode escalar em picos sem afetar o de investimentos). A IA analisa dados históricos e comportamentais para calibrar decisões de crédito, especialmente para perfis com histórico financeiro raso (jovens e MEIs). Processos de automação (RPA combinado com IA) cuidam de tarefas operacionais como validação documental.
-
-**Tipo de ganho:** redução de custo (automação substitui trabalho manual repetitivo), diferenciação (crédito rápido e mais preciso que concorrentes tradicionais), qualidade/tempo (decisões em segundos).
+**Tipo de ganho:** qualidade/tempo (dados prontos para uso mais rápido, produtos financeiros mais precisos), redução de risco (governança previne inconsistências e falhas regulatórias).
 
 ---
 
-#### Logística Externa (distribuição e canais)
+#### Operações (produtos e serviços financeiros)
 
-A distribuição dos produtos e serviços da NovaCred acontece inteiramente por canais digitais. O aplicativo móvel é o principal ponto de contato, complementado por integrações com meios de pagamento como Pix e cartão de crédito/débito.
+O núcleo da NovaCred é a oferta de produtos financeiros digitais: **conta digital** para movimentação e recebimentos, **cartão de crédito sem anuidade** para compras e pagamentos, **empréstimos pessoais com análise automatizada** para acesso a crédito rápido, e uma **plataforma de investimentos simplificada** para aplicações financeiras. Esses quatro produtos compõem o portfólio que atende tanto jovens adultos (que buscam praticidade e baixo custo) quanto microempreendedores (que precisam de crédito acessível e controle financeiro do negócio).
 
-**Como agrega valor:** o cliente acessa todos os serviços (conta, crédito, investimentos, pagamentos) em um único aplicativo, sem necessidade de deslocamento físico. A abertura de conta e a contratação de crédito são feitas online, com fricção mínima.
+**Como agrega valor:** o cliente abre uma conta em minutos, sem burocracia. Solicita um empréstimo e recebe resposta em segundos, não em dias como em bancos tradicionais. Usa um cartão sem anuidade para compras do dia a dia. Investe em produtos de renda fixa ou variável diretamente no app. A automação dos processos internos permite que a NovaCred ofereça esses produtos a custos mais baixos que bancos tradicionais, repassando essa economia ao cliente (como a isenção de anuidade do cartão).
 
-**Papel do SI:** o aplicativo é sustentado por APIs que integram os diversos serviços internos e externos (Pix, bandeiras de cartão, Open Finance). A operação 100% digital elimina custos de agências físicas e permite atender clientes em qualquer localidade. A integração com Pix por aproximação (NFC) e carteiras digitais expande os canais de uso sem exigir infraestrutura adicional.
+**Papel do SI:** cada produto financeiro é sustentado por um sistema específico dentro de uma arquitetura em microsserviços, o que permite que funcionem de forma independente (o serviço de crédito pode escalar em picos de demanda sem afetar a plataforma de investimentos). A IA analisa dados históricos e comportamentais para calibrar decisões de crédito, especialmente para perfis com histórico financeiro raso (jovens e MEIs), que seriam recusados por modelos tradicionais de scoring bancário. Processos de automação (RPA combinado com IA) viabilizam o onboarding rápido (validação de documentos para abertura de conta) e a conciliação de transações do cartão e da conta.
 
-**Tipo de ganho:** redução de custo (eliminação de canais físicos), qualidade/tempo (serviços disponíveis 24h, contratação instantânea).
-
----
-
-#### Marketing e Vendas (personalização e segmentação)
-
-O marketing da NovaCred é orientado por dados. A empresa utiliza Big Data para segmentar seu público (jovens adultos e MEIs), entender comportamentos de consumo e oferecer produtos contextualizados ao momento de vida de cada cliente.
-
-**Como agrega valor:** em vez de ofertas genéricas, o cliente recebe recomendações que fazem sentido para sua situação, como um limite de crédito ajustado ao faturamento real do MEI ou alertas de investimento adequados ao perfil de risco do jovem adulto.
-
-**Papel do SI:** motores de recomendação alimentados por dados transacionais e comportamentais permitem hiperpersonalização. Com a integração do Open Finance, a NovaCred pode acessar dados de outras instituições (com consentimento do cliente), criando uma visão mais completa para oferecer produtos mais relevantes. Isso reduz o custo de aquisição ao direcionar esforços para perfis com maior probabilidade de conversão.
-
-**Tipo de ganho:** diferenciação (ofertas personalizadas que concorrentes genéricos não conseguem replicar), coordenação/integração (Open Finance conecta dados de múltiplas fontes para análise mais precisa).
+**Tipo de ganho:** redução de custo (automação viabiliza produtos como cartão sem anuidade), diferenciação (crédito acessível a perfis subatendidos pelo sistema bancário tradicional), qualidade/tempo (aprovação de crédito e abertura de conta em minutos).
 
 ---
 
-#### Serviços (pós-venda e suporte)
+#### Logística Externa (entrega dos produtos financeiros ao cliente)
 
-Os serviços incluem atendimento ao cliente, monitoramento de transações, alertas financeiros e ferramentas de gestão integradas ao aplicativo.
+Todos os produtos financeiros da NovaCred, conta digital, cartão, empréstimos e investimentos, chegam ao cliente por um único canal: o aplicativo móvel. Não há agências, não há correspondentes bancários. O app é ao mesmo tempo a "vitrine", o "balcão de atendimento" e o "caixa" da empresa. O cliente abre conta, contrata crédito, faz pagamentos via Pix, usa o cartão e aplica em investimentos, tudo no mesmo lugar.
 
-**Como agrega valor:** o cliente tem controle financeiro na palma da mão: alertas de gastos, notificações de movimentação, histórico detalhado. Para o MEI, o app oferece funcionalidades de controle de fluxo de caixa, alertas de recebimentos e organização financeira que vão além de uma simples conta bancária.
+**Como agrega valor:** o cliente acessa todos os seus produtos financeiros 24 horas por dia, de qualquer lugar, sem deslocamento. A contratação de crédito ou abertura de conta acontece em minutos, com fricção mínima. Para o MEI que precisa resolver uma questão financeira do negócio às 22h, o app é o único canal necessário.
 
-**Papel do SI:** sistemas de monitoramento em tempo real detectam comportamentos suspeitos e protegem o cliente contra fraudes. Chatbots e atendimento automatizado resolvem dúvidas frequentes sem necessidade de intervenção humana, reduzindo custos de suporte. A integração de todas essas funcionalidades no mesmo aplicativo cria conveniência que aumenta a retenção.
+**Papel do SI:** o aplicativo é sustentado por APIs que integram os diversos serviços internos (conta, crédito, investimentos) e externos (Pix, bandeiras de cartão, Open Finance). A operação 100% digital elimina custos de agências físicas e permite atender clientes em qualquer localidade do país. A integração com Pix por aproximação (NFC) e carteiras digitais expande as formas de uso dos produtos sem exigir infraestrutura adicional.
 
-**Tipo de ganho:** diferenciação (ferramentas de gestão financeira que outros serviços não oferecem de forma integrada), redução de custo (automação do atendimento).
+**Tipo de ganho:** redução de custo (eliminação de canais físicos), qualidade/tempo (produtos financeiros disponíveis 24h, contratação instantânea).
+
+---
+
+#### Marketing e Vendas (oferta personalizada de produtos financeiros)
+
+A NovaCred não oferece os mesmos produtos da mesma forma para todos. Utilizando Big Data, a empresa segmenta seu público (jovens adultos e microempreendedores) e ajusta a oferta de cada produto financeiro ao perfil e momento de vida do cliente. Um MEI com faturamento estável recebe oferta de capital de giro com condições específicas para seu negócio. Um jovem adulto com perfil conservador recebe sugestões de investimentos de renda fixa, não de renda variável.
+
+**Como agrega valor:** em vez de ofertas genéricas iguais para todos (como um banco tradicional faria), o cliente recebe propostas de crédito, investimento e serviços que fazem sentido para sua situação real. Isso aumenta a chance de o produto ser útil e reduz a inadimplência (crédito oferecido a quem pode pagar).
+
+**Papel do SI:** motores de recomendação alimentados por dados transacionais e comportamentais permitem ajustar a oferta de cada produto financeiro ao perfil individual. Com a integração do Open Finance, a NovaCred pode acessar dados de outras instituições (com consentimento do cliente), criando uma visão financeira mais completa para oferecer condições de crédito e investimento mais precisas. Isso também reduz o custo de aquisição ao direcionar esforços de venda para perfis com maior probabilidade de conversão.
+
+**Tipo de ganho:** diferenciação (ofertas financeiras personalizadas que concorrentes genéricos não conseguem replicar), coordenação/integração (Open Finance conecta dados de múltiplas instituições para análise mais precisa do cliente).
+
+---
+
+#### Serviços (gestão financeira contínua e suporte ao cliente)
+
+Depois que o cliente abre a conta, contrata crédito ou faz investimentos, a NovaCred continua entregando valor por meio de serviços de gestão financeira e suporte. O app oferece alertas de gastos no cartão, notificações de movimentação da conta, acompanhamento de investimentos e histórico financeiro detalhado. Para o MEI, o app funciona como ferramenta de gestão do negócio: controle de fluxo de caixa, alertas de recebimentos via Pix, organização de despesas.
+
+**Como agrega valor:** o cliente não precisa de uma planilha ou outro app para controlar sua vida financeira. Tudo está integrado na mesma plataforma onde ele já tem conta, cartão e crédito. Para o MEI, isso resolve uma dor concreta: organizar as finanças do negócio sem precisar de contador ou software à parte.
+
+**Papel do SI:** sistemas de monitoramento em tempo real detectam transações suspeitas e protegem o cliente contra fraudes no cartão e na conta. Chatbots e atendimento automatizado resolvem dúvidas sobre produtos (limite do cartão, parcelas do empréstimo, rendimento dos investimentos) sem necessidade de intervenção humana. A integração de gestão financeira, produtos e suporte no mesmo aplicativo cria conveniência que aumenta a retenção do cliente.
+
+**Tipo de ganho:** diferenciação (gestão financeira integrada aos produtos, não oferecida separadamente), redução de custo (automação do atendimento sobre os produtos).
 
 ---
 
