@@ -118,13 +118,13 @@ A NovaCred depende de parceiros externos críticos: provedores de nuvem, bandeir
 
 Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valor (acima), propomos duas estratégias para a NovaCred melhorar sua posição competitiva.
 
-### Estratégia 1: Hiperpersonalização baseada em dados integrados
+### Estratégia 1: Oferta contextualizada por perfil financeiro do cliente
 
-**O que é:** utilizar a combinação de dados internos (transações, comportamento no app) com dados externos (Open Finance) para oferecer a cada cliente produtos e condições ajustados ao seu momento de vida, de forma automatizada e contínua.
+**O que é:** usar os dados que a NovaCred já acumula sobre cada cliente (transações, comportamento no app, histórico de crédito) combinados com dados externos via Open Finance para adequar produtos, condições e comunicação ao perfil e momento financeiro de cada pessoa, de forma contínua.
 
-**Conexão com a Cadeia de Valor:** essa estratégia integra duas atividades primárias: as operações (modelos de IA que transformam dados em decisões de crédito e recomendações) e o marketing/vendas (ofertas personalizadas entregues no momento certo), apoiadas pelo desenvolvimento tecnológico (refinamento contínuo dos modelos com dados acumulados).
+**Conexão com a Cadeia de Valor:** essa estratégia integra duas atividades primárias: as operações (modelos de IA que transformam dados em decisões de crédito e recomendações) e o marketing/vendas (ofertas adequadas ao contexto do cliente), apoiadas pelo desenvolvimento tecnológico (refinamento contínuo dos modelos com dados acumulados).
 
-**Conexão com Porter:** a hiperpersonalização mitiga a rivalidade ao criar diferenciação difícil de copiar (não basta ter os mesmos produtos, é preciso ter os mesmos dados e modelos calibrados). Também mitiga o poder de barganha dos clientes ao aumentar o custo percebido de troca: quanto mais o cliente usa a plataforma, mais preciso o serviço se torna, e migrar para outro player significa perder essa "inteligência" construída sobre seu perfil.
+**Conexão com Porter:** a contextualização da oferta mitiga a rivalidade ao criar diferenciação difícil de copiar, pois não basta ter os mesmos produtos, é preciso ter os mesmos dados e modelos calibrados com anos de uso. Também mitiga o poder de barganha dos clientes ao aumentar o custo percebido de troca: quanto mais o cliente usa a plataforma, mais adequado o serviço se torna ao seu perfil, e migrar para outro player significa recomeçar esse processo do zero.
 
 **Como o SI sustenta:** o SI viabiliza toda a cadeia dado → informação → conhecimento. Dados brutos de transações são transformados em informação contextualizada (padrões de consumo, risco de inadimplência, sazonalidade do faturamento do MEI) e, ao longo do tempo, em conhecimento organizacional incorporado nos modelos de IA. Sem o SI integrando processos, pessoas e tecnologia, esses dados permaneceriam fragmentos isolados sem utilidade para decisão.
 
