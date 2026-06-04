@@ -183,6 +183,13 @@ Quando receber um enunciado, fazer perguntas (mesmo que respondendo implicitamen
 - Repetir a estrutura por força (padronização ajuda correção e leitura).
 - Manter coerência de termos: “dado” ≠ “informação”.
 
+### 9.1) Padrões de escrita a evitar (remetem a texto gerado por IA)
+
+1. **Travessão (— ou --) no lugar de vírgula.** Usar vírgula para intercalações e pausas, não travessão.
+2. **Ponto e vírgula (;) no lugar de ponto final.** Preferir frases mais curtas com ponto final em vez de encadear com ponto e vírgula.
+3. **Enumerações sempre com exatamente 3 itens.** Variar a quantidade: às vezes 2, às vezes 4, conforme o conteúdo exigir.
+4. **Fórmula “Você pode achar X, mas na verdade Y”.** Evitar construções retóricas que antecipam e corrigem o leitor. Ir direto ao ponto.
+
 ---
 
 ## 10) Regras de formatação para entregas
