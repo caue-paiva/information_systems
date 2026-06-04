@@ -166,7 +166,7 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 A análise da Cadeia de Valor revela que o SI da NovaCred não é uma camada de suporte isolada, mas o elemento que conecta e potencializa todas as atividades da empresa. Desde a captação e estruturação dos dados (logística de entrada) até o atendimento pós-venda (serviços), passando pela oferta dos produtos financeiros (operações), pela distribuição via app (canais) e pela personalização de ofertas (marketing/vendas), cada elo da cadeia depende do SI para funcionar e gerar valor.
 
-As duas estratégias propostas, hiperpersonalização e plataforma para MEIs, são viáveis justamente porque a NovaCred já possui as atividades de apoio necessárias: infraestrutura com governança de dados, equipes com cultura ágil, desenvolvimento tecnológico com modelos de IA que se refinam continuamente e gestão estruturada de fornecedores. Isso não seria possível em uma organização que tratasse SI apenas como "o sistema que roda no computador".
+As duas estratégias propostas, oferta contextualizada por perfil e plataforma para MEIs, são viáveis justamente porque a NovaCred já possui as atividades de apoio necessárias: infraestrutura com governança de dados, equipes com cultura ágil, desenvolvimento tecnológico com modelos de IA que se refinam continuamente e gestão estruturada de fornecedores. Isso não seria possível em uma organização que tratasse SI apenas como "o sistema que roda no computador".
 
 Para que essas estratégias se concretizem, é necessário atenção às três dimensões do SI como sistema sociotécnico:
 
