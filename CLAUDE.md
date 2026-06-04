@@ -9,6 +9,18 @@ Use isto como um “prompt permanente” para resolver:
 - relatórios e estudos de caso (ex.: fintechs),
 - resumos para prova.
 
+## Material de referência da disciplina
+
+Resumos organizados por área temática estão disponíveis em `aulasSI/`:
+
+- `aulasSI/01-conceitos-fundamentais-SI.md` — dado/informação/conhecimento, SI, 3 dimensões, objetivos organizacionais
+- `aulasSI/02-vantagem-competitiva-porter.md` — 5 forças de Porter, cadeia de valor, estratégias competitivas
+- `aulasSI/03-SI-nas-empresas.md` — tipos de SI (SPT, SIG, SAD, SAE), pirâmide de níveis
+- `aulasSI/04-sistemas-integrados-ERP.md` — ERP, integração, processos de negócio
+- `aulasSI/05-SI-e-mercado.md` — mercado de TI, dimensões de problemas empresariais
+
+**Como usar:** leia esses arquivos para contexto on-demand, conforme o assunto do exercício ou caso. O arquivo `01-conceitos-fundamentais-SI.md` é relevante para **todos** os exercícios e casos, pois contém as definições base da disciplina (dado ≠ informação, SI sociotécnico, 3 dimensões). Os demais devem ser lidos conforme o tema (Porter → arquivo 02, tipos de SI → arquivo 03, ERP → arquivo 04).
+
 ---
 
 ## 1) Regras de ouro (sempre cumprir)
@@ -44,6 +56,7 @@ Use isto como um “prompt permanente” para resolver:
   para apoiar operações, gestão, decisões e estratégia.
 
 **Não reduzir** SI a “aplicativo” ou “software”.
+**Não confundir** SI com infraestrutura de TI: servidores, nuvem e redes são componentes do SI, não sinônimos.
 
 ---
 
@@ -92,6 +105,8 @@ Para cada força:
 Localizar impactos em:
 - **primárias**: logística interna, operações, logística externa, marketing/vendas, serviços
 - **apoio**: infraestrutura, RH, desenvolvimento tecnológico, compras
+
+Se renomear ou adaptar uma atividade ao contexto (ex.: "Logística Externa" → "Canais e Distribuição" para fintech), mencionar o nome original do modelo de Porter e justificar a adaptação.
 
 Sempre declarar o tipo de ganho:
 - redução de custo,
@@ -173,6 +188,8 @@ Quando receber um enunciado, fazer perguntas (mesmo que respondendo implicitamen
 - Não justificar intensidade (baixa/média/alta) com o cenário.
 - Não citar trade-offs (segurança, privacidade, dependência, custo).
 - Ignorar fornecedores/parceiros (ex.: cloud, bandeiras, reguladores) em setores como financeiro.
+- Escrever “Papel do SI” como se fosse vantagem de tecnologia (APIs, microsserviços, nuvem). O foco deve ser: como dados viram informação para decisão, quem usa essa informação e como o processo muda.
+- Omitir subseções exigidas pelo enunciado para “variar a escrita”. Ler o enunciado e listar os requisitos por atividade antes de começar.
 
 ---
 
@@ -182,6 +199,7 @@ Quando receber um enunciado, fazer perguntas (mesmo que respondendo implicitamen
 - Sempre fechar cada seção com “implicação”: o que isso significa para estratégia e SI.
 - Repetir a estrutura por força (padronização ajuda correção e leitura).
 - Manter coerência de termos: “dado” ≠ “informação”.
+- Estrutura repetida entre seções **não é formulaico** quando o enunciado a exige. Se o exercício pede “como agrega valor” e “papel do SI” para cada atividade, repetir essas subseções é seguir o exercício. O que deve variar é o conteúdo e a abertura dentro de cada subseção.
 
 ### 9.1) Padrões de escrita a evitar (remetem a texto gerado por IA)
 
@@ -203,4 +221,69 @@ Quando receber um enunciado, fazer perguntas (mesmo que respondendo implicitamen
   - integrações,
   - impactos e KPIs,
   - riscos.
+
+---
+
+## 11) Processo de revisão antes da entrega
+
+Use a skill `/review` para executar o processo abaixo automaticamente. Exemplo: `/review path/do/relatorio.md path/do/enunciado.pdf`
+
+A revisão é executada por um **sub-agente em background**, sem acesso ao contexto do chat principal. O sub-agente recebe apenas: o path do arquivo a revisar, o path do enunciado, os paths do material das aulas e as instruções abaixo. Isso evita viés de confirmação.
+
+### Passo 1 — Análise do enunciado (fonte da verdade)
+
+Ler o enunciado por completo e destilar:
+- **Requisitos obrigatórios**: seções, subseções e elementos que a resposta deve ter. Lista exaustiva, item por item. Essa lista é a fonte da verdade da revisão.
+- **Elementos que elevam nota**: observações do enunciado (ex.: "demonstre análise crítica", "evite respostas genéricas") que não são seções obrigatórias mas diferenciam a entrega.
+
+### Passo 2 — Compreensão do contexto e case
+
+Entender a fundo o cenário do exercício:
+- Empresa, setor, produtos/serviços, público-alvo, desafios de negócio.
+- Stakeholders, parceiros, reguladores, concorrentes.
+- Cruzar o que é pedido (passo 1) com o contexto: para cada requisito, quais elementos concretos do cenário devem aparecer na resposta?
+
+### Passo 3 — Material da disciplina
+
+Ler os resumos em `aulasSI/` (arquivos .md). **Sempre** ler `aulasSI/01-conceitos-fundamentais-SI.md` (contém as definições base usadas em todos os exercícios). Ler os demais conforme o tema do exercício (Porter → `02-vantagem-competitiva-porter.md`, tipos de SI → `03-SI-nas-empresas.md`, ERP → `04-sistemas-integrados-ERP.md`).
+- Identificar quais conceitos da disciplina o exercício exige.
+- Verificar definições, modelos e exemplos usados nas aulas para validar se o relatório os aplica corretamente.
+- O contexto do modelo (LLM) não é suficiente como fonte. O reviewer deve ler os arquivos.
+
+### Passo 4 — Avaliação por tópicos (nota 0-10 cada)
+
+Para cada tópico, o reviewer analisa o texto, dá a nota, lista pontos positivos, problemas encontrados (com número de linha) e sugestões concretas.
+
+**Tópico 1: Completude (requisitos do enunciado)**
+- Todas as seções e subseções exigidas estão presentes?
+- Falta algum elemento explicitamente pedido?
+- Avaliação binária por item: tem ou não tem.
+
+**Tópico 2: Conteúdo de SI (alinhamento com a disciplina)**
+- Conceitos usados corretamente? (dado ≠ informação ≠ conhecimento, SI sociotécnico, SI ≠ software/infraestrutura de TI)
+- "Papel do SI" fala de gestão de dados/informação/decisão/pessoas ou de tecnologia genérica (APIs, nuvem, microsserviços)?
+- As 3 dimensões (tecnologia, organização, pessoas) aparecem?
+- Verificar contra o material das aulas (passo 3).
+
+**Tópico 3: Especificidade ao cenário**
+- Usa elementos concretos do enunciado (empresa, produtos, público, parceiros, regulação)?
+- As respostas são específicas do caso ou poderiam descrever qualquer empresa?
+- Cada afirmação importante tem evidência do cenário?
+
+**Tópico 4: Análise crítica**
+- Explica mecanismos (como e por quê) ou apenas afirma resultados?
+- Aponta limitações, riscos ou trade-offs?
+- Demonstra julgamento próprio sobre o cenário?
+
+**Tópico 5: Escrita**
+- Texto claro, fluido, parágrafos com tamanho adequado?
+- Padrões de escrita IA ausentes? (ver seção 9.1)
+- Conteúdo dentro das subseções variado (aberturas e exemplos diferentes entre seções)?
+- Estrutura repetida entre seções **não é problema** quando o enunciado a exige.
+
+### Passo 5 — Resultado final
+
+- Score geral (média dos tópicos).
+- Top 3 problemas em ordem de prioridade, com sugestão de correção concreta.
+- Indicar se o relatório está pronto para entrega ou se precisa de mais uma rodada.
 
