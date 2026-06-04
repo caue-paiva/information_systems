@@ -20,13 +20,25 @@ A Cadeia de Valor de Porter permite identificar onde a NovaCred gera valor ao en
 
 ### 1.1 Atividades Primárias
 
+#### Logística de Entrada (captação e estruturação de dados)
+
+A logística de entrada é a etapa de recebimento e organização da matéria-prima do negócio. No caso da NovaCred, essa matéria-prima são os dados: cadastrais (nome, CPF, renda declarada), transacionais (compras no cartão, transferências via Pix, pagamentos de parcelas) e externos (informações compartilhadas via Open Finance com consentimento do cliente). Esses dados chegam de múltiplas fontes, em formatos e frequências diferentes, e precisam ser validados, padronizados e armazenados de forma estruturada antes de alimentarem qualquer produto ou decisão.
+
+**Como agrega valor:** garante que o histórico financeiro do cliente esteja completo, atualizado e confiável, permitindo que os produtos da NovaCred (crédito, investimentos, conta digital) funcionem com base em dados íntegros.
+
+**Papel do SI:** o SI é responsável por receber esses dados brutos, verificar sua integridade (um CPF válido, uma transação sem duplicidade, um consentimento de Open Finance vigente) e organizá-los em uma base estruturada. Sem essa etapa, as atividades seguintes da cadeia, desde a análise de crédito até a personalização de ofertas, operariam sobre dados inconsistentes ou incompletos, comprometendo a qualidade das decisões. A captação precisa ser contínua e em tempo real para que o cliente veja suas movimentações atualizadas no app assim que ocorrem.
+
+**Tipo de ganho:** qualidade/tempo (dados validados e disponíveis em tempo real), redução de risco (integridade dos dados que alimentam decisões de crédito e conformidade regulatória).
+
+---
+
 #### Operações (produtos e serviços financeiros)
 
 O núcleo da NovaCred é a oferta de produtos financeiros digitais: **conta digital** para movimentação e recebimentos, **cartão de crédito sem anuidade** para compras e pagamentos, **empréstimos pessoais com análise automatizada** para acesso a crédito rápido, e uma **plataforma de investimentos simplificada** para aplicações financeiras. Esses quatro produtos compõem o portfólio que atende tanto jovens adultos (que buscam praticidade e baixo custo) quanto microempreendedores (que precisam de crédito acessível e controle financeiro do negócio).
 
 **Como agrega valor:** o cliente abre uma conta em minutos, sem burocracia. Solicita um empréstimo e recebe resposta em segundos, não em dias como em bancos tradicionais. Usa um cartão sem anuidade para compras do dia a dia. Investe em produtos de renda fixa ou variável diretamente no app. A automação dos processos internos permite que a NovaCred ofereça esses produtos a custos mais baixos que bancos tradicionais, repassando essa economia ao cliente (como a isenção de anuidade do cartão).
 
-**Papel do SI:** o SI integra os dados do cliente (cadastrais, transacionais, comportamentais) e os transforma em informação que sustenta cada produto. Na concessão de crédito, por exemplo, o sistema cruza histórico de pagamentos, renda estimada e padrões de consumo para gerar uma avaliação de risco personalizada, permitindo aprovar perfis com histórico financeiro raso (jovens e MEIs) que seriam recusados por modelos tradicionais de scoring bancário. Na conta digital, o SI organiza e apresenta ao cliente suas movimentações de forma estruturada, transformando dados brutos de transações em informação útil para controle financeiro. A automação de processos internos (validação de documentos, conciliação de transações) reduz custos operacionais e viabiliza produtos como o cartão sem anuidade. Os modelos de IA, por sua vez, dependem da equipe de gestão de risco para definir seus parâmetros e ajustar critérios quando o perfil de inadimplência muda, garantindo que as decisões automatizadas continuem adequadas ao público da NovaCred.
+**Papel do SI:** a partir dos dados já captados e estruturados na etapa anterior, o SI os transforma em informação que sustenta cada produto. Na concessão de crédito, o sistema cruza histórico de pagamentos, renda estimada e padrões de consumo para gerar uma avaliação de risco personalizada, aprovando perfis (jovens e MEIs) que seriam recusados por modelos tradicionais de scoring bancário. A automação de processos internos (validação de documentos, conciliação de transações) reduz custos operacionais e viabiliza produtos como o cartão sem anuidade. Os modelos de IA dependem da equipe de gestão de risco para definir seus parâmetros e ajustar critérios quando o perfil de inadimplência muda, garantindo que as decisões automatizadas continuem adequadas ao público da NovaCred.
 
 **Tipo de ganho:** redução de custo (automação viabiliza produtos como cartão sem anuidade), diferenciação (crédito acessível a perfis subatendidos pelo sistema bancário tradicional), qualidade/tempo (aprovação de crédito e abertura de conta em minutos).
 
@@ -34,9 +46,11 @@ O núcleo da NovaCred é a oferta de produtos financeiros digitais: **conta digi
 
 #### Canais e Distribuição (como os produtos financeiros chegam ao cliente)
 
-Diferente de um banco tradicional com agências físicas, a NovaCred entrega todos os seus produtos por um único canal: o aplicativo móvel. O app funciona como "vitrine", "balcão" e "caixa" ao mesmo tempo. O cliente acessa conta, cartão, crédito e investimentos 24 horas por dia, de qualquer lugar, contratando serviços em minutos e sem deslocamento.
+Diferente de um banco tradicional com agências físicas, a NovaCred entrega todos os seus produtos por um único canal: o aplicativo móvel. O app funciona como "vitrine", "balcão" e "caixa" ao mesmo tempo.
 
-**Papel do SI:** o SI define como a informação financeira é organizada, priorizada e apresentada ao cliente. Não se trata apenas do aplicativo como software, mas de um conjunto de decisões sobre quais dados mostrar, em que ordem e com que contexto: o saldo aparece junto com os gastos recentes no cartão, as parcelas de empréstimo são exibidas ao lado do rendimento dos investimentos, e o fluxo de caixa do MEI é consolidado a partir de dados de múltiplas fontes. Essas decisões de organização da informação envolvem equipes de produto e negócio (não apenas desenvolvedores) e processos de design que traduzem dados financeiros em uma experiência compreensível para o público da NovaCred. A operação 100% digital elimina custos de agências físicas e permite atender clientes em qualquer localidade do país.
+**Como agrega valor:** o cliente acessa conta, cartão, crédito e investimentos 24 horas por dia, de qualquer lugar, contratando serviços em minutos e sem deslocamento.
+
+**Papel do SI:** o SI define como a informação financeira é organizada e apresentada ao cliente. Não se trata apenas do aplicativo como software, mas de decisões sobre quais dados mostrar, em que ordem e com que contexto: o saldo aparece junto com os gastos recentes no cartão, as parcelas de empréstimo ao lado do rendimento dos investimentos, e o fluxo de caixa do MEI é consolidado a partir de múltiplas fontes. Essas decisões envolvem equipes de produto e negócio, não apenas desenvolvedores. A operação 100% digital elimina custos de agências físicas e permite atender clientes em qualquer localidade do país.
 
 **Tipo de ganho:** redução de custo (eliminação de canais físicos), qualidade/tempo (produtos financeiros disponíveis 24h, contratação instantânea).
 
@@ -48,7 +62,7 @@ A NovaCred não oferece os mesmos produtos da mesma forma para todos. Utilizando
 
 **Como agrega valor:** em vez de ofertas genéricas iguais para todos (como um banco tradicional faria), o cliente recebe propostas de crédito, investimento e serviços que fazem sentido para sua situação real. Isso aumenta a chance de o produto ser útil e reduz a inadimplência (crédito oferecido a quem pode pagar).
 
-**Papel do SI:** o SI coleta dados brutos (valores de transações, datas, frequência de uso) que isoladamente não dizem muito, e os transforma em informação útil para decisão. Por exemplo, os dados de recebimentos via Pix de um MEI são apenas números soltos. Quando o SI os organiza e identifica a regularidade do faturamento, essa sequência de dados vira a informação de que aquele cliente tem capacidade de pagamento estável, o que fundamenta uma oferta de capital de giro com condições adequadas. Sem essa transformação de dado em informação, a NovaCred não teria como diferenciar suas ofertas. Com a integração do Open Finance, o SI também acessa dados de outras instituições (com consentimento do cliente), ampliando a visão financeira para oferecer condições de crédito e investimento mais precisas. Isso reduz o custo de aquisição ao direcionar esforços de venda para perfis com maior probabilidade de conversão.
+**Papel do SI:** o SI transforma dados brutos em informação útil para decisão. Por exemplo, os recebimentos via Pix de um MEI são apenas números soltos, mas quando o SI identifica a regularidade desse faturamento, essa sequência vira a informação de que o cliente tem capacidade de pagamento estável, fundamentando uma oferta de capital de giro adequada. Com a integração do Open Finance, o SI também acessa dados de outras instituições (com consentimento do cliente), ampliando a visão financeira e reduzindo o custo de aquisição ao direcionar esforços para perfis com maior probabilidade de conversão.
 
 **Tipo de ganho:** diferenciação (ofertas financeiras personalizadas que concorrentes genéricos não conseguem replicar), coordenação/integração (Open Finance conecta dados de múltiplas instituições para análise mais precisa do cliente).
 
@@ -56,7 +70,9 @@ A NovaCred não oferece os mesmos produtos da mesma forma para todos. Utilizando
 
 #### Serviços (gestão financeira contínua e suporte ao cliente)
 
-A relação com o cliente não termina na contratação. O app oferece alertas de gastos, notificações de movimentação, acompanhamento de investimentos e histórico financeiro detalhado. Para o microempreendedor, funciona como ferramenta de gestão do negócio: controle de fluxo de caixa, organização de despesas e acompanhamento de recebimentos, eliminando a necessidade de planilhas ou softwares à parte.
+A relação com o cliente não termina na contratação.
+
+**Como agrega valor:** o app oferece alertas de gastos, notificações de movimentação, acompanhamento de investimentos e histórico financeiro detalhado. Para o microempreendedor, funciona como ferramenta de gestão do negócio: controle de fluxo de caixa, organização de despesas e acompanhamento de recebimentos, eliminando a necessidade de planilhas ou softwares à parte.
 
 **Papel do SI:** o SI transforma padrões de uso em alertas acionáveis (gasto acima do habitual, vencimento de parcela, queda no faturamento mensal do negócio) e consolida dados dispersos em uma visão que o cliente usa para tomar decisões financeiras. O atendimento automatizado resolve dúvidas frequentes sobre os produtos, reduzindo custos de suporte.
 
@@ -148,7 +164,7 @@ Com base nas análises das Cinco Forças de Porter (Parte 1) e da Cadeia de Valo
 
 ## 3. Considerações Finais
 
-A análise da Cadeia de Valor revela que o SI da NovaCred não é uma camada de suporte isolada, mas o elemento que conecta e potencializa todas as atividades da empresa. Desde a oferta dos produtos financeiros (operações) até o atendimento pós-venda (serviços), passando pela distribuição via app (canais) e pela personalização de ofertas (marketing/vendas), cada elo da cadeia depende do SI para funcionar e gerar valor.
+A análise da Cadeia de Valor revela que o SI da NovaCred não é uma camada de suporte isolada, mas o elemento que conecta e potencializa todas as atividades da empresa. Desde a captação e estruturação dos dados (logística de entrada) até o atendimento pós-venda (serviços), passando pela oferta dos produtos financeiros (operações), pela distribuição via app (canais) e pela personalização de ofertas (marketing/vendas), cada elo da cadeia depende do SI para funcionar e gerar valor.
 
 As duas estratégias propostas, hiperpersonalização e plataforma para MEIs, são viáveis justamente porque a NovaCred já possui as atividades de apoio necessárias: infraestrutura com governança de dados, equipes com cultura ágil, desenvolvimento tecnológico com modelos de IA que se refinam continuamente e gestão estruturada de fornecedores. Isso não seria possível em uma organização que tratasse SI apenas como "o sistema que roda no computador".
 
