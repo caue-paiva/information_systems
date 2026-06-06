@@ -8,8 +8,10 @@ Repositório da disciplina Sistemas de Informação (ICMC/USP, 2026/1). Contém 
 sistemas_infor/
 ├── aulasSI/              # Material das aulas e resumos
 ├── ex2-fintech/          # Exercício 2 (NovaCred)
+├── ex3-vodafone/         # Exercício 3 (Vodafone, ERP)
 ├── ex_erp/               # Exercício ERP
 ├── projeto_final/        # (criar quando iniciar o projeto)
+├── md2pdf.py             # Script para gerar PDF a partir de Markdown
 ├── CLAUDE.md             # Instruções para o assistente IA
 ├── AGENTS.md             # Configuração de agentes
 ├── README.md             # Este arquivo
@@ -73,6 +75,43 @@ A skill dispara um sub-agente em background que:
 3. Lê os resumos das aulas para validar conceitos
 4. Avalia o texto em 5 tópicos (completude, conteúdo SI, especificidade, análise crítica, escrita), nota 0-10 cada
 5. Retorna score geral e top 3 problemas com sugestões concretas
+
+## Geração de PDF (`md2pdf.py`)
+
+Script reutilizável que converte qualquer relatório em Markdown para PDF, mantendo o padrão visual usado nos exercícios (fonte sans-serif, títulos em negrito preto, parágrafos justificados). Usa as bibliotecas `markdown` (Markdown → HTML) e `PyMuPDF`/`fitz` (HTML → PDF), sem depender de `pandoc` ou de bibliotecas com dependências de sistema.
+
+### Dependências
+
+```bash
+pip3 install --index-url https://pypi.org/simple/ markdown pymupdf
+```
+
+### Uso
+
+```bash
+# saída implícita: relatorio.md → relatorio.pdf
+python3 md2pdf.py ex3-vodafone/relatorio.md
+
+# definindo o arquivo de saída
+python3 md2pdf.py ex3-vodafone/relatorio.md -o ex3-vodafone/relatorio.pdf
+```
+
+### Campos configuráveis
+
+| Opção | Padrão | Descrição |
+|---|---|---|
+| `-o`, `--output` | mesmo nome do `.md` | Caminho do PDF de saída |
+| `--paper` | `a4` | Tamanho da página (`a4`, `letter`, etc.) |
+| `--margin` | `50` | Margem em pontos |
+| `--font` | `sans-serif` | Família de fonte CSS |
+| `--font-size` | `10.5` | Tamanho da fonte do corpo (pt) |
+| `--accent` | `#000000` | Cor de títulos e negritos (ex.: `#0a1f44` para azul) |
+
+Exemplo com ajustes:
+
+```bash
+python3 md2pdf.py ex3-vodafone/relatorio.md --margin 60 --font-size 11 --accent "#0a1f44"
+```
 
 ## Fluxo de desenvolvimento
 
