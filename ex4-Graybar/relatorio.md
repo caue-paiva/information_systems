@@ -28,7 +28,7 @@ Este documento responde às quatro perguntas do estudo de caso, aplicando os con
 
 ### 2.1 O problema central
 
-O problema da Graybar era a **incapacidade de distinguir clientes lucrativos de clientes não lucrativos e de alocar seus recursos comerciais de acordo com isso**. Como distribuidora atacadista, a empresa estava espremida entre fabricantes e clientes que pressionavam por preços menores, prazos de entrega mais curtos e melhores serviços, mas se recusavam a pagar pelos serviços adicionais. O resultado setorial era o arrochamento das margens de lucro.
+O problema da Graybar era a **incapacidade de distinguir clientes lucrativos de clientes não lucrativos e de alocar seus recursos comerciais de acordo com isso**. Como distribuidora atacadista, a empresa estava espremida entre fabricantes e clientes que pressionavam por preços menores, prazos de entrega mais curtos e melhores serviços, mas se recusavam a pagar pelos serviços adicionais. O resultado setorial era o aperto das margens de lucro.
 
 Diante dessa pressão, os representantes de venda concentravam atenção principalmente nos clientes que gastavam mais. O negócio é muito transacional, com 21 mil pedidos e 90 mil itens de linha por dia, e aproximadamente 97% dos 117 mil clientes fecham negócios menores que US$ 25 mil por ano. Focar apenas nas grandes contas deixava a imensa maioria dos clientes sem atenção e sem critério para decidir quais valiam um relacionamento mais próximo e quais deveriam ser preteridos.
 
@@ -66,9 +66,9 @@ Desenvolver a solução de análise de clientes exigiu tratar as três dimensõe
 
 ### 3.3 Questões tecnológicas
 
-- **Aproveitamento do ERP e do data warehouse.** A equipe identificou no sistema ERP existente os campos necessários e escreveu as consultas para extrair os dados do data warehouse SAP NetWeaver.
+- **Aproveitamento do ERP e do data warehouse.** A equipe identificou no sistema ERP existente os campos necessários e escreveu as consultas para extrair os dados do data warehouse SAP NetWeaver. O ERP funcionava como o banco de dados central e integrado que padronizava os dados das áreas funcionais, e o data warehouse consolidava esse acervo de várias fontes numa fonte única e consistente, condição para que a estratificação de clientes rodasse sobre dados confiáveis.
 - **Modelagem analítica.** Fatores como receita, poder de compra do cliente e penetração das linhas de produto receberam pesos conforme as necessidades do negócio.
-- **Evolução da plataforma.** A solução começou em uma planilha com muitas linhas de dados, ganhou um painel no BusinessObjects Dashboards da SAP e culminou no SAP Customer Value Intelligence, da suíte SAP Customer Analytics.
+- **Evolução da plataforma.** A solução começou em uma planilha com muitas linhas de dados, ganhou um painel no BusinessObjects Dashboards da SAP e culminou no SAP Customer Value Intelligence, ferramenta de CRM analítico da suíte SAP Customer Analytics.
 - **Processamento em memória.** O SAP HANA acelerou a análise de grandes volumes transacionais e viabilizou o trabalho em tempo real, com dados de cliente em nível muito mais detalhado do que antes.
 - **Qualidade dos dados.** Como parte dos dados se perdia, a confiabilidade da base era um requisito, ainda que a empresa já mantivesse 95% do necessário.
 
@@ -100,7 +100,7 @@ O CRM analítico reúne as aplicações que analisam os dados de cliente gerados
 
 ### 4.4 O mecanismo da mudança
 
-A transformação segue a lógica de dado para informação para decisão. Os mesmos dados transacionais que antes ficavam subaproveitados passaram a alimentar uma segmentação que diz a cada vendedor onde concentrar esforço. O negócio deixou de ser conduzido pela máxima de servir melhor quem compra mais e passou a ser conduzido pela leitura de quem gera valor e de quem pode passar a gerar. Esse é o ganho central do CRM analítico, coerente com o princípio de CRM de que uma fração dos clientes costuma concentrar a maior parte do resultado, exatamente o que a estrutura da Graybar sugere, com vendas concentradas em poucas contas grandes enquanto 97% dos clientes fecham menos de US$ 25 mil por ano.
+A transformação segue a lógica de dado para informação para decisão. Os mesmos dados transacionais que antes ficavam subaproveitados passaram a alimentar uma segmentação que diz a cada vendedor onde concentrar esforço. O negócio deixou de ser conduzido pela máxima de servir melhor quem compra mais e passou a ser conduzido pela leitura de quem gera valor e de quem pode passar a gerar. Esse é o ganho central do CRM analítico, coerente com o princípio de CRM de que uma fração dos clientes costuma concentrar a maior parte do resultado. É um padrão compatível com a estrutura de clientes da Graybar, em que 97% das 117 mil contas são de baixo volume (abaixo de US$ 25 mil por ano) e a empresa vinha concentrando seu esforço comercial em uma pequena parcela de contas grandes.
 
 **Implicação:** o CRM analítico não substituiu o relacionamento, mas o tornou seletivo e informado. A Graybar passou a praticar uma gestão de carteira orientada por lucratividade, sustentando ações de retenção, redução da taxa de cancelamento e venda cruzada nos segmentos certos.
 
