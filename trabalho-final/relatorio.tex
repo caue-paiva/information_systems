@@ -1,0 +1,315 @@
+% =====================================================================
+%  SSC0120 - Sistemas de Informacao - Projeto Final
+%  Banco Horizonte - Horizonte 360
+%  Compilar com XeLaTeX (Overleaf: menu > Compiler > XeLaTeX)
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+% Fonte Times New Roman real (requer XeLaTeX).
+%  - Compilando LOCALMENTE no Windows: funciona, usa a fonte do sistema.
+%  - No Overleaf: Times New Roman NAO vem instalado. Escolha uma opcao:
+%      (a) suba os arquivos times.ttf/timesbd.ttf/timesi.ttf/timesbi.ttf
+%          (de C:\Windows\Fonts) para a pasta do projeto; ou
+%      (b) troque a linha \setmainfont abaixo por:  \setmainfont{TeX Gyre Termes}
+%          (clone metricamente identico ao Times New Roman, ja disponivel no Overleaf)
+\setmainfont{Times New Roman}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Documento monocromatico (preto sobre branco) ----
+\definecolor{accent}{HTML}{000000}
+\definecolor{accent2}{HTML}{000000}
+
+% ---- Espacamento 1,5 e paragrafos justificados ----
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.2em}
+
+% ---- Titulos de secao coloridos ----
+\titleformat{\section}{\color{accent}\normalsize\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\color{accent2}\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.0em}{0.4em}
+
+% ---- Sumario ----
+\renewcommand{\contentsname}{Sum\'ario}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+% =====================================================================
+%  CAPA
+% =====================================================================
+% ---- CAPA no padrao ABNT (NBR 14724): monocromatica, centralizada ----
+\begin{titlepage}
+\begin{center}
+
+{\large UNIVERSIDADE DE S\~AO PAULO\par}
+\vspace{0.2cm}
+{\large INSTITUTO DE CI\^ENCIAS MATEM\'ATICAS E DE COMPUTA\c{C}\~AO\par}
+\vspace{0.2cm}
+{\normalsize SSC0120 \textemdash{} SISTEMAS DE INFORMA\c{C}\~AO\par}
+
+\vfill
+
+{\normalsize
+CAU\^E PAIVA LIRA \textemdash{} 14675416\\[4pt]
+JO\~AO PEDRO ALVES NOTARI GODOY \textemdash{} 14582076\\[4pt]
+LET\'ICIA BARBOSA NEVES \textemdash{} 14588659\\[4pt]
+PEDRO LUCAS FIGUEIREDO BAHIENSE \textemdash{} 14675458\par}
+
+\vfill
+
+{\large\bfseries HORIZONTE 360: PLATAFORMA DE VIS\~AO \'UNICA DO CLIENTE PARA A DECIS\~AO DE CR\'EDITO E O ATENDIMENTO NO BANCO HORIZONTE\par}
+
+\vfill
+\vfill
+
+{\normalsize S\~AO CARLOS\par}
+\vspace{0.2cm}
+{\normalsize 2026\par}
+
+\end{center}
+\end{titlepage}
+
+% =====================================================================
+%  SUMARIO (pagina seguinte a capa)
+% =====================================================================
+\clearpage
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+% =====================================================================
+%  CORPO
+% =====================================================================
+\setcounter{page}{1}
+
+\section{Introdu\c{c}\~ao}
+
+\subsection{Contextualiza\c{c}\~ao do problema}
+
+O Banco Horizonte \'e uma institui\c{c}\~ao financeira brasileira de m\'edio porte que atua principalmente no ambiente digital. Fundado h\'a cerca de oito anos, come\c{c}ou oferecendo uma proposta simples e pouco burocr\'atica, composta por conta digital gratuita, cart\~ao de d\'ebito e transfer\^encias pelo aplicativo. Com o crescimento da base de clientes e o acirramento da concorr\^encia no setor, o portf\'olio se ampliou e passou a incluir cart\~ao de cr\'edito, empr\'estimos pessoais, antecipa\c{c}\~ao de receb\'iveis para microempreendedores, investimentos de baixo risco e seguros b\'asicos. Hoje o banco re\'une aproximadamente tr\^es milh\~oes de clientes cadastrados, dos quais cerca de metade usa a conta todos os meses. Seu p\'ublico \'e formado por jovens adultos, trabalhadores informais, microempreendedores individuais e pequenos comerciantes que t\^em no aplicativo o principal canal de relacionamento com a institui\c{c}\~ao.
+
+O crescimento acelerado, por\'em, n\~ao veio acompanhado de uma estrutura tecnol\'ogica integrada. Os sistemas foram sendo implantados de forma isolada, conforme cada nova necessidade surgia. O cadastro de clientes foi desenvolvido internamente nos primeiros anos. O m\'odulo de an\'alise de cr\'edito foi contratado depois junto a uma empresa terceirizada. O atendimento opera sobre uma plataforma externa de CRM, e a \'area de risco trabalha com planilhas e relat\'orios manuais, separados do restante da opera\c{c}\~ao. O resultado \'e um conjunto de silos de informa\c{c}\~ao que n\~ao se comunicam de maneira confi\'avel, exatamente o problema que a disciplina descreve como caracter\'istico de uma organiza\c{c}\~ao sem sistemas integrados.
+
+Diante da amplitude desse cen\'ario, este projeto delimita o problema a um processo espec\'ifico, e n\~ao \`a integra\c{c}\~ao de todos os sistemas de uma vez. O foco est\'a na \textbf{decis\~ao de concess\~ao de cr\'edito e no atendimento \`as d\'uvidas dela decorrentes}. Quando um cliente solicita um cart\~ao de cr\'edito ou um empr\'estimo, seus dados percorrem etapas de cadastro, an\'alise de renda, verifica\c{c}\~ao de hist\'orico interno e decis\~ao. Como essas etapas n\~ao est\~ao conectadas, uma informa\c{c}\~ao atualizada no cadastro pode n\~ao aparecer no sistema de cr\'edito, e o atendente que recebe a reclama\c{c}\~ao de um cliente sobre uma recusa raramente enxerga o motivo da decis\~ao. O problema, portanto, \'e duplo: a decis\~ao de cr\'edito \'e lenta e inconsistente, e o atendimento n\~ao consegue explic\'a-la ao cliente.
+
+Vale detalhar por que a concess\~ao de cr\'edito \'e o ponto mais sens\'ivel dessa fragmenta\c{c}\~ao. A jornada de uma solicita\c{c}\~ao percorre o cadastro, a valida\c{c}\~ao documental, a an\'alise de renda, a verifica\c{c}\~ao do hist\'orico interno e a decis\~ao final, e cada uma dessas etapas vive em um sistema diferente, alimentado e mantido por equipes distintas. Quando esses sistemas n\~ao trocam informa\c{c}\~ao de forma autom\'atica, o custo n\~ao \'e apenas de tempo. Uma renda atualizada que n\~ao chega ao m\'odulo de cr\'edito pode levar \`a recusa de um cliente que, na verdade, teria capacidade de pagamento, ao passo que a aus\^encia de um sinal relevante pode resultar em uma aprova\c{c}\~ao que aumenta a inadimpl\^encia.
+
+O problema tamb\'em tem uma face organizacional evidente. A \'area comercial deseja aprovar mais clientes e ampliar a contrata\c{c}\~ao de produtos, a \'area de risco busca reduzir a inadimpl\^encia e evitar perdas, e o atendimento precisa resolver reclama\c{c}\~oes com rapidez e clareza. Como cada uma trabalha com ferramentas e m\'etricas pr\'oprias, surgem diverg\^encias sobre a causa dos problemas: para o comercial, o excesso de recusas afasta bons clientes; para o risco, aprova\c{c}\~oes r\'apidas demais elevam as perdas futuras; para o atendimento, falta informa\c{c}\~ao clara para explicar as decis\~oes ao cliente. O desafio, portanto, n\~ao \'e apenas tecnol\'ogico, mas tamb\'em de coordena\c{c}\~ao entre \'areas que hoje enxergam apenas parte do quadro.
+
+Ficam \textbf{fora do escopo} deste projeto o sistema antifraude e as quest\~oes de seguran\c{c}a da informa\c{c}\~ao, o processamento de transa\c{c}\~oes do dia a dia (Pix, pagamentos, uso de cart\~ao) e a substitui\c{c}\~ao dos sistemas legados. Essas frentes continuam operando como est\~ao e poder\~ao ser incorporadas em fases posteriores. A escolha por um recorte estreito \'e deliberada, pois uma proposta que tentasse resolver todos os desafios da organiza\c{c}\~ao perderia profundidade e viabilidade.
+
+\subsection{Motiva\c{c}\~ao e justificativa}
+
+A concess\~ao de cr\'edito \'e uma das principais fontes de receita de um banco e, ao mesmo tempo, um dos pontos de maior atrito com o cliente. No Banco Horizonte, a fragmenta\c{c}\~ao dos sistemas gera tr\^es impactos concretos. O primeiro \'e a lentid\~ao: como os dados precisam ser reunidos manualmente entre cadastro, cr\'edito e hist\'orico, o banco demora mais para aprovar clientes leg\'itimos, o que representa perda direta de receita e abre espa\c{c}o para que o cliente feche neg\'ocio com um concorrente. O segundo \'e a inconsist\^encia: decis\~oes tomadas com base em informa\c{c}\~ao incompleta ou desatualizada resultam ora em recusas de bons clientes, ora em aprova\c{c}\~oes arriscadas. O terceiro \'e a opacidade no atendimento: quando o cliente pergunta pelo aplicativo por que seu cr\'edito foi negado, o atendente consulta v\'arias telas, abre chamados internos ou encaminha a solicita\c{c}\~ao, o que aumenta o tempo de resposta e passa a impress\~ao de que o banco n\~ao controla os pr\'oprios processos.
+
+Esses impactos merecem aten\c{c}\~ao porque atingem o n\'ucleo da rela\c{c}\~ao do banco com seu p\'ublico. Em um setor no qual o cliente \'e cada vez menos fiel e migra rapidamente diante de uma falha, o atrito na aprova\c{c}\~ao de cr\'edito e a falta de explica\c{c}\~ao clara funcionam como gatilhos de evas\~ao. Al\'em disso, a diretoria depende de indicadores como taxa de aprova\c{c}\~ao, inadimpl\^encia por perfil e tempo m\'edio de atendimento para decidir, mas hoje esses n\'umeros v\^em de extra\c{c}\~oes manuais e cruzamento de planilhas, um processo lento e sujeito a erro que reduz a capacidade estrat\'egica da empresa.
+
+A solu\c{c}\~ao proposta, apresentada em alto n\'ivel, \'e a \textbf{Horizonte 360}, uma plataforma de vis\~ao \'unica do cliente. Ela n\~ao substitui os sistemas existentes. Em vez disso, cria uma camada de integra\c{c}\~ao que re\'une, em uma interface consolidada, os dados de cadastro, de cr\'edito e de atendimento necess\'arios para decidir e explicar uma concess\~ao de cr\'edito. A partir dessa base consolidada, a plataforma oferece um painel de apoio \`a decis\~ao de cr\'edito, uma vis\~ao de atendimento com o hist\'orico e o motivo das decis\~oes, e pain\'eis gerenciais com indicadores atualizados.
+
+Os objetivos principais s\~ao reduzir o tempo da decis\~ao de cr\'edito, aumentar a consist\^encia dessas decis\~oes, dar ao atendimento uma vis\~ao completa do cliente e substituir a apura\c{c}\~ao manual de indicadores por informa\c{c}\~ao confi\'avel e tempestiva. Como benef\'icios esperados, a proposta busca aumentar a aprova\c{c}\~ao de bons clientes, reduzir o retrabalho operacional, melhorar a experi\^encia no aplicativo e apoiar decis\~oes gerenciais mais r\'apidas. Metas de refer\^encia, a serem calibradas com dados internos, seriam reduzir o tempo m\'edio de decis\~ao de cr\'edito, elevar a taxa de aprova\c{c}\~ao de bons clientes sem aumentar a inadimpl\^encia e diminuir o tempo m\'edio de atendimento das d\'uvidas ligadas a cr\'edito.
+
+\subsection{Solu\c{c}\~oes existentes}
+
+O mercado oferece v\'arias abordagens para problemas semelhantes, e vale contrast\'a-las com a proposta do grupo. Uma primeira categoria s\~ao os sistemas de \textit{core banking} integrados, como Temenos e Finastra, que unificam produtos e processos banc\'arios em uma \'unica plataforma. Eles resolvem a fragmenta\c{c}\~ao na origem, mas exigem substitui\c{c}\~ao dos sistemas legados, com custo elevado, prazo longo de implanta\c{c}\~ao e risco de interromper servi\c{c}os essenciais, algo que o pr\'oprio cen\'ario do Banco Horizonte recomenda evitar.
+
+Uma segunda categoria s\~ao as plataformas de vis\~ao \'unica do cliente, os chamados \textit{Customer 360} e as \textit{Customer Data Platforms}, das quais o Salesforce Financial Services Cloud \'e um exemplo conhecido no setor financeiro. Elas consolidam o hist\'orico do cliente para \'areas de relacionamento e vendas, o que se aproxima da nossa ideia, embora costumem ser gen\'ericas e centradas em marketing, sem foco no processo espec\'ifico de decis\~ao de cr\'edito.
+
+Uma terceira categoria s\~ao os motores de decis\~ao de cr\'edito, oferecidos por empresas como Serasa Experian e FICO, que aplicam regras e modelos de score para automatizar a an\'alise. S\~ao poderosos na etapa de decis\~ao, mas trabalham sobre os dados que recebem, de modo que n\~ao resolvem, por si s\'o, o problema de reunir e padronizar informa\c{c}\~ao espalhada em v\'arios sistemas. Por fim, h\'a as ferramentas de integra\c{c}\~ao e as de Business Intelligence, como plataformas de iPaaS para conectar sistemas e Power BI ou Tableau para pain\'eis gerenciais, que s\~ao pe\c{c}as de infraestrutura \'uteis, por\'em n\~ao constituem uma solu\c{c}\~ao de neg\'ocio pronta para o problema descrito.
+
+O quadro a seguir resume o contraste entre as alternativas de mercado e a proposta do grupo.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{3.0cm}p{2.3cm}p{2.1cm}p{4.6cm}@{}}
+\toprule
+\textbf{Abordagem} & \textbf{Resolve a fragmenta\c{c}\~ao?} & \textbf{Custo e risco} & \textbf{Limita\c{c}\~ao para o Banco Horizonte}\\
+\midrule
+Core banking integrado & Sim, na origem & Muito altos & Exige trocar os legados e pode interromper servi\c{c}os\\
+Customer 360 / CDP & Parcialmente & M\'edios & Gen\'erico e voltado a marketing, n\~ao ao cr\'edito\\
+Motor de decis\~ao de cr\'edito & N\~ao & M\'edios & Decide, mas n\~ao consolida os dados dispersos\\
+iPaaS mais BI & Parcialmente & M\'edios & Infraestrutura \'util, n\~ao uma solu\c{c}\~ao de neg\'ocio\\
+\textbf{Horizonte 360} & Sim, por integra\c{c}\~ao & Moderados & Recorte no processo de cr\'edito e atendimento\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O diferencial da Horizonte 360 est\'a na combina\c{c}\~ao e no recorte. Em vez de trocar os sistemas, ela integra os que j\'a existem por meio de uma camada intermedi\'aria, o que reduz custo e risco para um banco de m\'edio porte. Em vez de uma vis\~ao gen\'erica do cliente, ela \'e desenhada em torno de um processo de neg\'ocio bem definido, a concess\~ao de cr\'edito e o atendimento a ela associado. E, diferentemente de um motor de cr\'edito isolado, ela cuida tamb\'em da consolida\c{c}\~ao e da governan\c{c}a dos dados que alimentam a decis\~ao, al\'em de devolver essa informa\c{c}\~ao, de forma compreens\'ivel, para quem atende o cliente e para quem administra o banco.
+
+\section{Solu\c{c}\~ao Proposta}
+
+\subsection{Funcionalidades}
+
+A Horizonte 360 organiza suas funcionalidades em torno de uma base comum, a vis\~ao consolidada do cliente, e de tr\^es p\'ublicos que a utilizam: o analista de cr\'edito, o atendente e a gest\~ao.
+
+\textbf{Vis\~ao \'unica do cliente.} Re\'une em uma s\'o tela o perfil consolidado: dados de cadastro, produtos contratados, solicita\c{c}\~oes anteriores de cr\'edito e suas decis\~oes, movimenta\c{c}\~oes financeiras relevantes, reclama\c{c}\~oes registradas e situa\c{c}\~ao atual da conta. \'E a funda\c{c}\~ao sobre a qual as demais funcionalidades operam.
+
+\textbf{Painel de decis\~ao de cr\'edito.} Voltado ao analista, apresenta de forma organizada a renda declarada e estimada, o hist\'orico interno de pagamentos, o comportamento financeiro do cliente e o score de cr\'edito. Sobre esse conjunto, o painel exibe uma recomenda\c{c}\~ao de decis\~ao (aprovar, recusar ou aprovar com limite ajustado) acompanhada de uma justificativa estruturada e de um limite sugerido. A recomenda\c{c}\~ao \'e um apoio, e a decis\~ao final continua com o analista.
+
+\textbf{Vis\~ao de atendimento.} Oferece ao atendente a mesma base consolidada, adaptada \`a sua necessidade. Traz um resumo da situa\c{c}\~ao do cliente, o motivo da \'ultima decis\~ao de cr\'edito em linguagem clara e os pr\'oximos passos poss\'iveis, para que o atendente responda no primeiro contato, sem abrir chamados ou encaminhar a solicita\c{c}\~ao a outro setor.
+
+\textbf{Painel gerencial.} Consolida os indicadores que a diretoria precisa acompanhar: taxa de aprova\c{c}\~ao de cr\'edito, tempo m\'edio de decis\~ao, inadimpl\^encia por perfil de cliente, reclama\c{c}\~oes recorrentes e rentabilidade por produto. Substitui as extra\c{c}\~oes manuais por informa\c{c}\~ao atualizada de forma autom\'atica.
+
+\textbf{Registro e trilha de decis\~oes.} Mant\'em o hist\'orico de cada decis\~ao de cr\'edito, com os dados que a embasaram e o respons\'avel, o que apoia auditoria interna e conformidade regulat\'oria. Complementa o conjunto uma fun\c{c}\~ao de \textbf{alertas de pend\^encias}, que sinaliza solicita\c{c}\~oes paradas em alguma etapa do fluxo de cr\'edito.
+
+Para ilustrar como essas funcionalidades operam em conjunto, considere um cen\'ario t\'ipico. Maria, microempreendedora individual e cliente h\'a dois anos, solicita pelo aplicativo um limite de cr\'edito para capital de giro. No modelo atual, seu pedido percorreria sistemas desconectados, e uma atualiza\c{c}\~ao recente de renda no cadastro poderia n\~ao estar vis\'ivel para quem analisa o cr\'edito, atrasando a resposta. Com a Horizonte 360, ao abrir a solicita\c{c}\~ao o analista visualiza, em uma \'unica tela, o cadastro atualizado de Maria, o hist\'orico de pagamentos em dia, a movimenta\c{c}\~ao recente da conta e o score. O painel sugere a aprova\c{c}\~ao com um limite compat\'ivel e apresenta a justificativa que sustenta a recomenda\c{c}\~ao, cabendo ao analista confirm\'a-la ou ajust\'a-la. Alguns dias depois, Maria entra em contato em d\'uvida sobre o valor liberado, e o atendente, pela vis\~ao de atendimento, enxerga o motivo da decis\~ao e explica na hora, sem abrir chamado ou transferir a liga\c{c}\~ao. O cen\'ario mostra a informa\c{c}\~ao, e n\~ao apenas o dado isolado, circulando entre as \'areas no momento em que \'e necess\'aria.
+
+\subsection{Quest\~oes t\'ecnicas}
+
+Do ponto de vista tecnol\'ogico, a solu\c{c}\~ao se apoia em quatro camadas, coerentes com a ideia de sistema integrado apresentada na disciplina, por\'em sem a substitui\c{c}\~ao total que um ERP tradicional exigiria.
+
+\textbf{Camada de integra\c{c}\~ao.} Conecta os sistemas de cadastro, cr\'edito e CRM por meio de APIs e de um barramento de integra\c{c}\~ao (padr\~ao de API gateway ou iPaaS). Essa camada \'e respons\'avel por buscar e enviar informa\c{c}\~ao entre os sistemas de origem, respeitando o funcionamento de cada um.
+
+\textbf{Camada de dados.} Um reposit\'orio anal\'itico centralizado, no modelo de data warehouse, recebe c\'opias organizadas dos dados relevantes por meio de rotinas de extra\c{c}\~ao, transforma\c{c}\~ao e carga (ETL). Nesse fluxo, os dados s\~ao extra\'idos dos sistemas de cadastro, cr\'edito e CRM, transformados para um formato comum (padroniza\c{c}\~ao de campos, aplica\c{c}\~ao da chave \'unica de cliente e deduplica\c{c}\~ao) e carregados no reposit\'orio, de onde alimentam a vis\~ao \'unica e os pain\'eis. Parte dessas cargas pode ser agendada em lotes peri\'odicos, e os dados mais sens\'iveis \`a decis\~ao, como uma atualiza\c{c}\~ao de cadastro, podem ser sincronizados de forma quase imediata. Esse reposit\'orio sustenta tanto a vis\~ao \'unica quanto os pain\'eis gerenciais, sem sobrecarregar os sistemas operacionais de origem.
+
+\textbf{Camada de aplica\c{c}\~ao.} Comporta o painel de decis\~ao de cr\'edito, a vis\~ao de atendimento e o motor de regras que gera as recomenda\c{c}\~oes. Para os pain\'eis gerenciais, integra-se uma ferramenta de Business Intelligence.
+
+\textbf{Infraestrutura.} A opera\c{c}\~ao em nuvem \'e adequada ao volume de cerca de tr\^es milh\~oes de clientes, por oferecer escalabilidade de processamento e de armazenamento, al\'em de disponibilidade e conectividade compat\'iveis com um banco digital cujo canal principal \'e o aplicativo. Ainda que a seguran\c{c}a n\~ao seja o foco do projeto, a prote\c{c}\~ao dos dados pessoais \'e obrigat\'oria: criptografia em tr\^ansito e em repouso, controle de acesso por perfil de usu\'ario e ader\^encia \`a Lei Geral de Prote\c{c}\~ao de Dados s\~ao requisitos t\'ecnicos inegoci\'aveis. A qualidade dos dados depende de mecanismos de deduplica\c{c}\~ao e de um cat\'alogo com defini\c{c}\~oes comuns, para que o mesmo dado tenha o mesmo significado em todas as \'areas.
+
+\textbf{Hardware, armazenamento e conectividade.} Por operar em nuvem, o banco n\~ao precisa investir em servidores pr\'oprios para sustentar a plataforma, e sim contratar capacidade de processamento e de armazenamento sob demanda, o que dilui o custo inicial e acompanha o crescimento da base de clientes. O armazenamento combina um banco de dados relacional, que sustenta a vis\~ao consolidada usada no dia a dia, e um reposit\'orio anal\'itico, que alimenta os pain\'eis gerenciais, ambos submetidos a pol\'iticas de reten\c{c}\~ao e de backup que preservam o hist\'orico de decis\~oes. A conectividade se apoia em APIs seguras entre a plataforma e os sistemas de origem, e a alta disponibilidade \'e um requisito de fato, j\'a que a an\'alise de cr\'edito e o atendimento passam a depender da plataforma ao longo do hor\'ario comercial e, no que toca ao aplicativo, em tempo integral.
+
+\subsection{Quest\~oes organizacionais}
+
+A ado\c{c}\~ao da Horizonte 360 depende de mudan\c{c}as que v\~ao al\'em da tecnologia. A mais importante \'e a institui\c{c}\~ao de uma \textbf{governan\c{c}a de dados}. \'E necess\'ario definir quem \'e respons\'avel por cada conjunto de informa\c{c}\~ao, padronizar defini\c{c}\~oes (o que conta como renda, como se classifica uma reclama\c{c}\~ao) e estabelecer regras de qualidade e atualiza\c{c}\~ao. Sem isso, a vis\~ao \'unica apenas re\'une dados inconsistentes em um lugar s\'o.
+
+O \textbf{processo de concess\~ao de cr\'edito} precisa ser revisto para que as etapas de cadastro, an\'alise e decis\~ao passem a compartilhar a mesma base, em vez de operar em sequ\^encia isolada. Isso exige redefinir pap\'eis e responsabilidades e criar, ainda que de forma enxuta, uma \'area ou comit\^e de dados que coordene a iniciativa. Em termos de recursos, o projeto demanda uma equipe de integra\c{c}\~ao, profissionais de an\'alise de dados e, sobretudo, patroc\'inio da diretoria, pois se trata de uma decis\~ao organizacional, e n\~ao de uma escolha restrita \`a \'area de tecnologia.
+
+Entre as barreiras previs\'iveis est\'a a resist\^encia das \'areas acostumadas aos silos, em especial a de risco, que hoje domina suas planilhas e pode ver a mudan\c{c}a como perda de controle. H\'a tamb\'em a depend\^encia do fornecedor terceirizado de cr\'edito, que precisa disponibilizar acesso a seus dados por meio de integra\c{c}\~ao, o que envolve negocia\c{c}\~ao contratual. Somam-se a esses pontos os riscos usuais de projetos de integra\c{c}\~ao: a dificuldade de conectar sistemas legados, a qualidade incerta dos dados antigos, o custo e o prazo. A gest\~ao da mudan\c{c}a, com comunica\c{c}\~ao clara dos ganhos e envolvimento das \'areas desde o in\'icio, \'e o principal instrumento para reduzir esses riscos.
+
+Justamente por causa desses riscos, a ado\c{c}\~ao deve ser faseada, e n\~ao realizada em uma \'unica virada. Uma primeira fase conectaria o cadastro ao m\'odulo de cr\'edito e construiria a vis\~ao \'unica, entregando valor imediato ao analista. Uma segunda fase levaria essa mesma vis\~ao ao atendimento, com a explica\c{c}\~ao das decis\~oes. Uma terceira fase consolidaria os pain\'eis gerenciais para a diretoria. Essa progress\~ao permite validar a qualidade dos dados a cada passo, colher ganhos parciais que sustentam o apoio interno ao projeto e reduzir o risco de interromper servi\c{c}os essenciais, exatamente a preocupa\c{c}\~ao que o pr\'oprio cen\'ario do banco levanta ao rejeitar a troca simult\^anea de todos os sistemas. Cada fase deve vir acompanhada de treinamento pr\'atico das equipes envolvidas e de um per\'iodo de opera\c{c}\~ao assistida, no qual o processo antigo e o novo convivem at\'e que a confian\c{c}a nos dados esteja estabelecida.
+
+\subsection{Quest\~oes humanas}
+
+Os efeitos sobre as pessoas variam conforme o papel de cada uma. Para o \textbf{atendente}, a mudan\c{c}a tende a ser positiva no dia a dia, j\'a que ele deixa de percorrer v\'arias telas e passa a resolver d\'uvidas sobre cr\'edito no primeiro contato, com mais autonomia e menos encaminhamentos. Em contrapartida, precisa ser treinado na nova ferramenta e aprender a confiar na informa\c{c}\~ao apresentada, o que s\'o acontece se os dados forem, de fato, confi\'aveis.
+
+Para o \textbf{analista de cr\'edito}, a plataforma reduz o trabalho manual de reunir dados e oferece uma recomenda\c{c}\~ao de apoio. Existe aqui um ponto de aten\c{c}\~ao humano relevante: o analista pode sentir que a recomenda\c{c}\~ao autom\'atica amea\c{c}a sua autonomia. Por isso a solu\c{c}\~ao deixa expl\'icito que a decis\~ao final \'e humana, e que o sistema informa, mas n\~ao decide. Para a \textbf{diretoria e a ger\^encia}, o ganho est\'a em substituir a consolida\c{c}\~ao manual de planilhas por pain\'eis atualizados, o que muda a rotina de acompanhamento e exige alguma familiariza\c{c}\~ao com as novas vis\~oes.
+
+Para o \textbf{cliente}, que \'e quem sustenta o neg\'ocio, os efeitos s\~ao sentidos como aprova\c{c}\~ao mais r\'apida e explica\c{c}\~oes mais claras sobre as decis\~oes, o que reduz frustra\c{c}\~ao e refor\c{c}a a confian\c{c}a no banco. J\'a a \textbf{\'area de risco} vive a transi\c{c}\~ao mais delicada, pois sai de um modo de trabalho baseado em planilhas pr\'oprias para um ambiente compartilhado, o que demanda acompanhamento e apoio ao longo da ado\c{c}\~ao.
+
+Os \textbf{parceiros} externos tamb\'em s\~ao impactados. O fornecedor terceirizado de an\'alise de cr\'edito passa a ser acionado por integra\c{c}\~ao cont\'inua, e n\~ao mais por consultas isoladas, o que exige alinhamento t\'ecnico e contratual, por\'em tende a tornar a rela\c{c}\~ao mais previs\'ivel e audit\'avel. Provedores de nuvem e bureaus de cr\'edito entram como parceiros de infraestrutura e de dados, cuja qualidade de servi\c{c}o passa a influenciar diretamente a experi\^encia do cliente final, o que refor\c{c}a a import\^ancia de acordos de n\'ivel de servi\c{c}o bem definidos.
+
+\subsection{Processos de neg\'ocio}
+
+Tr\^es processos de neg\'ocio s\~ao diretamente afetados. O primeiro, e mais importante, \'e o \textbf{processo de concess\~ao de cr\'edito}. Hoje ele \'e fragmentado, com etapas que n\~ao trocam informa\c{c}\~ao de forma autom\'atica. Com a solu\c{c}\~ao, o processo \'e aprimorado: as etapas passam a operar sobre a mesma vis\~ao consolidada, a an\'alise recebe um apoio de recomenda\c{c}\~ao e a decis\~ao fica registrada com sua justificativa. O benef\'icio esperado \'e uma decis\~ao mais r\'apida, mais consistente e rastre\'avel.
+
+O segundo \'e o \textbf{processo de atendimento a d\'uvidas sobre cr\'edito e conta}. Atualmente, o atendente depende de consultas a m\'ultiplos sistemas e de chamados internos. O processo \'e redesenhado para que a informa\c{c}\~ao necess\'aria esteja dispon\'ivel em uma \'unica vis\~ao, o que reduz o tempo de resposta e a necessidade de transferir o cliente entre setores.
+
+O terceiro \'e o \textbf{processo de acompanhamento gerencial}. Ele deixa de depender de extra\c{c}\~oes e cruzamentos manuais de planilhas e passa a ser sustentado por pain\'eis alimentados de forma autom\'atica. Trata-se, na pr\'atica, de um processo aprimorado e parcialmente automatizado, cujo benef\'icio \'e a disponibilidade de indicadores confi\'aveis para decis\~ao. Nenhum desses processos \'e criado do zero, o que refor\c{c}a o car\'ater incremental da proposta.
+
+\section{Processamento da Informa\c{c}\~ao}
+
+\subsection{Dados de entrada}
+
+A solu\c{c}\~ao se alimenta de dados que j\'a existem na organiza\c{c}\~ao, obtidos dos pr\'oprios sistemas por meio da camada de integra\c{c}\~ao. Do sistema de \textbf{cadastro} v\^em os dados pessoais, o CPF, os dados de contato, a ocupa\c{c}\~ao e a renda declarada. Do sistema de \textbf{cr\'edito} terceirizado v\^em o score, o hist\'orico de solicita\c{c}\~oes e decis\~oes anteriores e a an\'alise de renda. Da plataforma de \textbf{CRM} v\^em as reclama\c{c}\~oes, os chamados e o hist\'orico de contatos. Dos sistemas \textbf{transacionais} da conta v\^em as movimenta\c{c}\~oes relevantes, os pagamentos e a contrata\c{c}\~ao de produtos, que revelam o comportamento financeiro do cliente.
+
+A esses dados internos somam-se fontes \textbf{externas} consultadas no momento da an\'alise, como os bureaus de cr\'edito (Serasa e SPC) e, de forma opcional e mediante consentimento, dados de Open Finance. A origem de cada dado \'e sempre um sistema j\'a existente ou um servi\c{c}o externo j\'a utilizado pelo banco, o que refor\c{c}a que a plataforma re\'une e organiza informa\c{c}\~ao, sem criar uma nova base de coleta.
+
+Cabe uma distin\c{c}\~ao importante em rela\c{c}\~ao ao escopo. A plataforma \textbf{l\^e} as movimenta\c{c}\~oes da conta para compor o comportamento financeiro do cliente, mas n\~ao \textbf{processa} as transa\c{c}\~oes em si. O processamento de Pix, pagamentos e uso de cart\~ao continua a cargo dos sistemas transacionais atuais, que permanecem fora do escopo do projeto. A Horizonte 360 consome esses registros como insumo de an\'alise, sem interferir na opera\c{c}\~ao que os gera.
+
+\subsection{Processamento}
+
+O processamento transforma dados brutos em informa\c{c}\~ao \'util para a decis\~ao, e \'e aqui que se aplica a distin\c{c}\~ao central da disciplina entre dado e informa\c{c}\~ao. Um registro isolado como ``score 620'' ou ``tr\^es Pix devolvidos no m\^es'' \'e apenas um dado, sem significado suficiente para decidir. O tratamento realizado pela plataforma d\'a contexto a esses fatos.
+
+O primeiro passo \'e a \textbf{unifica\c{c}\~ao e a padroniza\c{c}\~ao}. Os dados vindos de sistemas diferentes s\~ao reconciliados por uma chave \'unica de cliente, o CPF, com deduplica\c{c}\~ao de registros e padroniza\c{c}\~ao de formatos e defini\c{c}\~oes. Em seguida, a informa\c{c}\~ao \'e \textbf{consolidada} na vis\~ao \'unica do cliente. Sobre essa base, um \textbf{motor de regras e score} combina renda, hist\'orico interno de pagamentos, comportamento financeiro e informa\c{c}\~oes de bureau para produzir uma avalia\c{c}\~ao de risco e uma recomenda\c{c}\~ao de decis\~ao. Esse motor aplica regras de neg\'ocio expl\'icitas, o que permite gerar, junto com a recomenda\c{c}\~ao, uma \textbf{justificativa estruturada} que torna a decis\~ao explic\'avel.
+
+Paralelamente, o processamento realiza \textbf{agrega\c{c}\~oes} para os indicadores gerenciais, calculando, por exemplo, a taxa de aprova\c{c}\~ao em um per\'iodo ou a inadimpl\^encia por perfil de cliente. \'E nesse ponto que o dado bruto se converte em informa\c{c}\~ao: ``score 620, renda compat\'ivel e hist\'orico interno sem atrasos'' passa a significar ``cliente de risco m\'edio, apto a um limite sugerido de determinado valor'', uma afirma\c{c}\~ao que reduz a incerteza de quem decide.
+
+Em termos de fluxo, o tratamento de uma solicita\c{c}\~ao de cr\'edito pode ser resumido em etapas encadeadas: a plataforma recebe o pedido e identifica o cliente pelo CPF; re\'une, da base consolidada, o cadastro, o hist\'orico interno e as movimenta\c{c}\~oes; consulta, quando necess\'ario, o bureau externo; aplica o motor de regras e score para avaliar o risco; devolve ao analista uma recomenda\c{c}\~ao com justificativa e limite sugerido; e registra a decis\~ao efetivamente tomada na trilha de auditoria. Cada etapa transforma o dado em uma informa\c{c}\~ao um pouco mais elaborada, at\'e chegar a uma recomenda\c{c}\~ao que o analista pode confirmar ou ajustar. Esse encadeamento evidencia que o valor da solu\c{c}\~ao n\~ao est\'a em coletar mais dados, e sim em organizar e contextualizar os que j\'a existem.
+
+\subsection{Informa\c{c}\~oes geradas}
+
+As informa\c{c}\~oes produzidas s\~ao direcionadas a cada p\'ublico. Para o \textbf{analista de cr\'edito}, a plataforma gera a recomenda\c{c}\~ao de decis\~ao, a justificativa que a sustenta e o limite sugerido, o que apoia uma an\'alise mais r\'apida e fundamentada. Para o \textbf{atendente}, gera um resumo da situa\c{c}\~ao do cliente, o motivo da \'ultima decis\~ao de cr\'edito em linguagem acess\'ivel e os pr\'oximos passos, o que permite responder ao cliente com clareza e no primeiro contato.
+
+Para a \textbf{diretoria e a ger\^encia}, produz os indicadores consolidados, taxa de aprova\c{c}\~ao, tempo m\'edio de decis\~ao, inadimpl\^encia por perfil, reclama\c{c}\~oes recorrentes e rentabilidade por produto, apresentados em pain\'eis atualizados. Essas informa\c{c}\~oes apoiam a organiza\c{c}\~ao em diferentes n\'iveis, o que dialoga com a pir\^amide de tipos de sistemas de informa\c{c}\~ao estudada na disciplina. No n\'ivel operacional, a plataforma consome a informa\c{c}\~ao produzida pelos sistemas de processamento de transa\c{c}\~oes (SPTs), que registram Pix, pagamentos e uso de cart\~ao, e a organiza para apoiar o atendimento e a an\'alise de cada cliente. Ela n\~ao substitui esses SPTs, e sim se posiciona acima deles, aproveitando os dados que produzem.
+
+No n\'ivel gerencial, os pain\'eis de acompanhamento funcionam como um Sistema de Informa\c{c}\~oes Gerenciais, ao consolidar relat\'orios peri\'odicos que permitem monitorar o desempenho do cr\'edito e identificar desvios, enquanto o motor de recomenda\c{c}\~ao de cr\'edito exerce papel pr\'oximo de um Sistema de Apoio \`a Decis\~ao, ao tratar uma an\'alise n\~ao totalmente estruturada.
+
+No n\'ivel estrat\'egico, os indicadores oferecem \`a diretoria uma base confi\'avel, ao modo de um Sistema de Apoio ao Executivo, para decidir sobre expans\~ao, ajuste de pol\'itica de cr\'edito e prioriza\c{c}\~ao de investimentos, decis\~oes hoje prejudicadas pela demora e pela imprecis\~ao dos relat\'orios manuais.
+
+\section{Valor Organizacional e Vantagem Competitiva}
+
+\subsection{Cadeia de valor}
+
+A cadeia de valor de Porter, embora concebida para empresas industriais, pode ser adaptada a um banco digital, com o cuidado de renomear atividades que no modelo original tratam de bens f\'isicos. As \textbf{atividades prim\'arias} do Banco Horizonte podem ser lidas da seguinte forma. A log\'istica interna corresponde \`a capta\c{c}\~ao e ao registro de clientes e de seus dados, isto \'e, o cadastro e o onboarding. As opera\c{c}\~oes, cora\c{c}\~ao do neg\'ocio, correspondem \`a an\'alise e \`a concess\~ao de cr\'edito e ao processamento das transa\c{c}\~oes. A log\'istica externa, que no modelo original trata da distribui\c{c}\~ao de produtos f\'isicos, aqui equivale \`a entrega dos produtos financeiros, como a libera\c{c}\~ao de um limite de cr\'edito e sua disponibiliza\c{c}\~ao no aplicativo. O marketing e vendas correspondem \`a oferta e \`a precifica\c{c}\~ao dos produtos. Os servi\c{c}os correspondem ao atendimento e ao p\'os-venda.
+
+As \textbf{atividades de apoio} incluem a infraestrutura da empresa, que abrange a gest\~ao e, de forma destacada neste caso, a tecnologia e a governan\c{c}a de dados, a gest\~ao de recursos humanos, o desenvolvimento tecnol\'ogico, entendido como a constru\c{c}\~ao dos sistemas e da pr\'opria plataforma, e as compras, que aqui envolvem fornecedores estrat\'egicos como a empresa terceirizada de cr\'edito, os provedores de nuvem e os bureaus.
+
+A tabela abaixo sintetiza essa leitura e antecipa onde a solu\c{c}\~ao gera valor.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{3.2cm}p{5.0cm}p{4.4cm}@{}}
+\toprule
+\textbf{Atividade (Porter)} & \textbf{Correspond\^encia no Banco Horizonte} & \textbf{Impacto da Horizonte 360}\\
+\midrule
+Log\'istica interna & Cadastro e onboarding de clientes e dados & Dados confi\'aveis alimentam a decis\~ao\\
+Opera\c{c}\~oes & An\'alise e concess\~ao de cr\'edito & Decis\~ao mais r\'apida e consistente\\
+Log\'istica externa & Entrega de produtos financeiros no aplicativo & Libera\c{c}\~ao \'agil ap\'os a aprova\c{c}\~ao\\
+Marketing e vendas & Oferta e precifica\c{c}\~ao de produtos & Ofertas guiadas pelo hist\'orico do cliente\\
+Servi\c{c}os & Atendimento e p\'os-venda & Explica\c{c}\~oes claras e menos tempo de resposta\\
+\midrule
+Infraestrutura & Tecnologia e governan\c{c}a de dados & Ativo de integra\c{c}\~ao reutiliz\'avel\\
+Desenvolvimento tecnol\'ogico & Constru\c{c}\~ao dos sistemas e da plataforma & Base para integra\c{c}\~oes futuras\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A Horizonte 360 atua com mais for\c{c}a em duas atividades prim\'arias e em duas de apoio. Nas \textbf{opera\c{c}\~oes}, melhora a decis\~ao de cr\'edito ao reunir e qualificar a informa\c{c}\~ao, com ganho de tempo e de consist\^encia, o que reduz tanto a recusa de bons clientes quanto as aprova\c{c}\~oes mal fundamentadas. Nos \textbf{servi\c{c}os}, qualifica o atendimento ao dar vis\~ao completa do cliente, com ganho de qualidade e de tempo de resposta. No \textbf{desenvolvimento tecnol\'ogico} e na \textbf{infraestrutura}, a camada de integra\c{c}\~ao e a governan\c{c}a de dados criam um ativo reutiliz\'avel que reduz o retrabalho e prepara o terreno para integra\c{c}\~oes futuras. Os tipos de ganho, portanto, combinam qualidade e tempo, redu\c{c}\~ao de custo operacional pela elimina\c{c}\~ao de tarefas manuais e coordena\c{c}\~ao, ao fazer a informa\c{c}\~ao fluir entre \'areas que antes trabalhavam isoladas.
+
+\subsection{Vantagem competitiva}
+
+O setor banc\'ario brasileiro \'e ao mesmo tempo altamente competitivo e regulado. Bancos tradicionais modernizam seus aplicativos, fintechs oferecem servi\c{c}os especializados e empresas de tecnologia avan\c{c}am sobre pagamentos e cr\'edito, ao passo que os clientes se mostram cada vez menos fi\'eis e trocam de institui\c{c}\~ao diante de qualquer falha. Nesse ambiente, a capacidade de decidir cr\'edito com rapidez e de explicar as decis\~oes deixa de ser detalhe operacional e passa a influenciar diretamente a reten\c{c}\~ao de clientes.
+
+A solu\c{c}\~ao contribui para a competitividade por meio de mecanismos claros. Pela \textbf{efici\^encia}, decis\~oes mais r\'apidas convertem mais solicita\c{c}\~oes em contratos e reduzem o custo operacional das an\'alises e do atendimento. Pela \textbf{diferencia\c{c}\~ao}, a transpar\^encia na explica\c{c}\~ao de uma recusa, algo raro entre concorrentes, fortalece a confian\c{c}a e melhora a experi\^encia no aplicativo, que \'e o principal ponto de contato do banco. Pela \textbf{intimidade com o cliente}, a vis\~ao consolidada do hist\'orico permite ofertas mais adequadas e apoia a reten\c{c}\~ao, elevando o custo de mudan\c{c}a percebido pelo usu\'ario. E pela \textbf{melhor tomada de decis\~ao}, os pain\'eis gerenciais d\~ao \`a diretoria agilidade estrat\'egica que o processo manual atual n\~ao permite.
+
+\`A luz das estrat\'egias competitivas gen\'ericas discutidas na disciplina, a proposta posiciona o Banco Horizonte principalmente na combina\c{c}\~ao de intimidade com o cliente e diferencia\c{c}\~ao, apoiada por ganhos de efici\^encia operacional. Os resultados esperados s\~ao a redu\c{c}\~ao do tempo de aprova\c{c}\~ao, o aumento da aprova\c{c}\~ao de bons clientes, a diminui\c{c}\~ao de perdas causadas por decis\~oes inconsistentes e a redu\c{c}\~ao do churn associado ao atrito no cr\'edito e no atendimento.
+
+Para tornar esses resultados verific\'aveis, o banco pode acompanhar indicadores como o tempo m\'edio de decis\~ao de cr\'edito, a taxa de aprova\c{c}\~ao de bons clientes frente \`a inadimpl\^encia observada, o tempo m\'edio de resolu\c{c}\~ao das d\'uvidas sobre cr\'edito no atendimento e a taxa de reten\c{c}\~ao de clientes que passaram por uma an\'alise de cr\'edito. Esses indicadores, j\'a produzidos pelos pain\'eis gerenciais, permitem medir se a solu\c{c}\~ao entrega o valor prometido, em vez de apenas presumi-lo.
+
+Conv\'em, por fim, reconhecer os trade-offs. A solu\c{c}\~ao aumenta a depend\^encia de fornecedores externos, exige investimento e prazo de implanta\c{c}\~ao, imp\~oe cuidados permanentes de privacidade sob a LGPD e traz o risco de excesso de confian\c{c}a na recomenda\c{c}\~ao autom\'atica, motivo pelo qual a decis\~ao final permanece com o analista humano. Reconhecer esses limites \'e o que torna a proposta cr\'ivel, e n\~ao uma promessa vazia.
+
+% ---- Nota de IA (nao numerada) ----
+\section*{Nota sobre o uso de ferramentas de Intelig\^encia Artificial}
+
+Em conformidade com a exig\^encia de transpar\^encia do enunciado, o grupo registra que ferramentas de Intelig\^encia Artificial foram utilizadas como apoio nas seguintes etapas: organiza\c{c}\~ao da estrutura do texto conforme o roteiro do projeto, revis\~ao de reda\c{c}\~ao e de coes\~ao, e apoio \`a sistematiza\c{c}\~ao das ideias discutidas pelo grupo. A defini\c{c}\~ao do problema, o recorte de escopo, as decis\~oes de solu\c{c}\~ao e a valida\c{c}\~ao do conte\'udo \`a luz do material da disciplina foram conduzidas pelos integrantes.
+
+% =====================================================================
+%  REFERENCIAS (pagina separada, no fim de tudo)
+% =====================================================================
+\clearpage
+\section{Refer\^encias Bibliogr\'aficas}
+\setlength{\parindent}{0pt}
+\begingroup
+\setlength{\parskip}{0.8em}
+
+LAUDON, Kenneth C.; LAUDON, Jane P. \textit{Sistemas de Informa\c{c}\~ao Gerenciais}. 11. ed. S\~ao Paulo: Pearson Education do Brasil, 2014.
+
+PORTER, Michael E. \textit{Estrat\'egia Competitiva: t\'ecnicas para an\'alise de ind\'ustrias e da concorr\^encia}. Rio de Janeiro: Elsevier, 2004.
+
+PORTER, Michael E. \textit{Vantagem Competitiva: criando e sustentando um desempenho superior}. Rio de Janeiro: Campus, 1989.
+
+BRASIL. Lei n\textsuperscript{o} 13.709, de 14 de agosto de 2018. \textit{Lei Geral de Prote\c{c}\~ao de Dados Pessoais (LGPD)}. Bras\'ilia, 2018.
+
+BANCO CENTRAL DO BRASIL. \textit{Open Finance no Brasil}. Dispon\'ivel no portal do Banco Central do Brasil.
+
+TOTVS. \textit{Cadeia de valor: o que \'e, para que serve e como aplicar}. Material de apoio da disciplina SSC0120.
+
+Material did\'atico da disciplina SSC0120 \textemdash{} Sistemas de Informa\c{c}\~ao (ICMC/USP), aulas sobre conceitos fundamentais de SI, vantagem competitiva e for\c{c}as de Porter, tipos de SI nas empresas e sistemas integrados (ERP).
+
+\endgroup
+
+\end{document}
