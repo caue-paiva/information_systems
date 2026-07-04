@@ -1,7 +1,7 @@
 # Horizonte 360: Plataforma de Visão Única do Cliente para a Decisão de Crédito e o Atendimento no Banco Horizonte
 
-**Universidade de São Paulo — Instituto de Ciências Matemáticas e de Computação**
-**SSC0120 — Sistemas de Informação — 2026/1**
+**Universidade de São Paulo, Instituto de Ciências Matemáticas e de Computação**
+**SSC0120, Sistemas de Informação, 2026/1**
 
 **Projeto Final**
 
@@ -179,7 +179,7 @@ BANCO CENTRAL DO BRASIL. *Open Finance no Brasil*. Disponível no portal do Banc
 
 TOTVS. *Cadeia de valor: o que é, para que serve e como aplicar*. Material de apoio da disciplina SSC0120.
 
-Material didático da disciplina SSC0120 — Sistemas de Informação (ICMC/USP), aulas sobre conceitos fundamentais de SI, vantagem competitiva e forças de Porter, tipos de SI nas empresas e sistemas integrados (ERP).
+Material didático da disciplina SSC0120, Sistemas de Informação (ICMC/USP), aulas sobre conceitos fundamentais de SI, vantagem competitiva e forças de Porter, tipos de SI nas empresas e sistemas integrados (ERP).
 
 ---
 
