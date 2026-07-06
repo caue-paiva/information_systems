@@ -16,5 +16,5 @@
 \contentsline {section}{\numberline {4}Valor Organizacional e Vantagem Competitiva}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Cadeia de valor}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Vantagem competitiva}{11}{subsection.4.2}%
-\contentsline {section}{Nota sobre o uso de ferramentas de Intelig\^encia Artificial}{12}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Refer\^encias Bibliogr\'aficas}{13}{section.5}%
+\contentsline {section}{\numberline {5}Nota sobre o uso de ferramentas de Intelig\^encia Artificial}{12}{section.5}%
+\contentsline {section}{\numberline {6}Refer\^encias Bibliogr\'aficas}{13}{section.6}%

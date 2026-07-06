@@ -22,7 +22,9 @@
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{booktabs}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\definecolor{linkblue}{HTML}{0B57D0}
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=black, citecolor=black, filecolor=black}
 
 % ---- Documento monocromatico (preto sobre branco) ----
 \definecolor{accent}{HTML}{000000}
@@ -125,7 +127,7 @@ O mercado oferece v\'arias abordagens para problemas semelhantes, e vale contras
 
 Uma segunda categoria s\~ao as plataformas de vis\~ao \'unica do cliente, os chamados \textit{Customer 360} e as \textit{Customer Data Platforms}, das quais o Salesforce Financial Services Cloud \'e um exemplo conhecido no setor financeiro. Elas consolidam o hist\'orico do cliente para \'areas de relacionamento e vendas, o que se aproxima da nossa ideia, embora costumem ser gen\'ericas e centradas em marketing, sem foco no processo espec\'ifico de decis\~ao de cr\'edito.
 
-Uma terceira categoria s\~ao os motores de decis\~ao de cr\'edito, oferecidos por empresas como Serasa Experian e FICO, que aplicam regras e modelos de score para automatizar a an\'alise. S\~ao poderosos na etapa de decis\~ao, mas trabalham sobre os dados que recebem, de modo que n\~ao resolvem, por si s\'o, o problema de reunir e padronizar informa\c{c}\~ao espalhada em v\'arios sistemas. Por fim, h\'a as ferramentas de integra\c{c}\~ao e as de Business Intelligence, como plataformas de iPaaS para conectar sistemas e Power BI ou Tableau para pain\'eis gerenciais, que s\~ao pe\c{c}as de infraestrutura \'uteis, por\'em n\~ao constituem uma solu\c{c}\~ao de neg\'ocio pronta para o problema descrito.
+Uma terceira categoria s\~ao os motores de decis\~ao de cr\'edito, oferecidos por empresas como Serasa Experian e FICO, que aplicam regras e modelos de score para automatizar a an\'alise. S\~ao poderosos na etapa de decis\~ao, mas trabalham sobre os dados que recebem, de modo que n\~ao resolvem, por si s\'o, o problema de reunir e padronizar informa\c{c}\~ao espalhada em v\'arios sistemas. Por fim, h\'a as ferramentas de integra\c{c}\~ao e as de Business Intelligence, como plataformas de iPaaS para conectar sistemas e Power BI ou Tableau para pain\'eis gerenciais. S\~ao pe\c{c}as \'uteis, mas parciais. O iPaaS conecta os sistemas sem tratar a decis\~ao nem o atendimento, e o BI concentra-se na an\'alise e na visualiza\c{c}\~ao de dados para a gest\~ao, sem apoiar o momento operacional da decis\~ao de cr\'edito nem o atendimento ao cliente. Isoladamente, nenhuma delas constitui uma solu\c{c}\~ao de neg\'ocio para o problema descrito.
 
 O quadro a seguir resume o contraste entre as alternativas de mercado e a proposta do grupo.
 
@@ -133,16 +135,20 @@ O quadro a seguir resume o contraste entre as alternativas de mercado e a propos
 \centering
 \small
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{3.0cm}p{2.3cm}p{2.1cm}p{4.6cm}@{}}
-\toprule
+\begin{tabular}{|p{3.3cm}|p{3.0cm}|p{2.4cm}|p{5.4cm}|}
+\hline
 \textbf{Abordagem} & \textbf{Resolve a fragmenta\c{c}\~ao?} & \textbf{Custo e risco} & \textbf{Limita\c{c}\~ao para o Banco Horizonte}\\
-\midrule
+\hline
 Core banking integrado & Sim, na origem & Muito altos & Exige trocar os legados e pode interromper servi\c{c}os\\
+\hline
 Customer 360 / CDP & Parcialmente & M\'edios & Gen\'erico e voltado a marketing, n\~ao ao cr\'edito\\
+\hline
 Motor de decis\~ao de cr\'edito & N\~ao & M\'edios & Decide, mas n\~ao consolida os dados dispersos\\
+\hline
 iPaaS mais BI & Parcialmente & M\'edios & Infraestrutura \'util, n\~ao uma solu\c{c}\~ao de neg\'ocio\\
+\hline
 \textbf{Horizonte 360} & Sim, por integra\c{c}\~ao & Moderados & Recorte no processo de cr\'edito e atendimento\\
-\bottomrule
+\hline
 \end{tabular}
 \end{table}
 
@@ -168,6 +174,8 @@ Para ilustrar como essas funcionalidades operam em conjunto, considere um cen\'a
 
 Alguns dias depois, Maria entra em contato em d\'uvida sobre o valor liberado, e o atendente, pela vis\~ao de atendimento, enxerga o motivo da decis\~ao e explica na hora, sem abrir chamado ou transferir a liga\c{c}\~ao. O cen\'ario mostra a informa\c{c}\~ao, e n\~ao apenas o dado isolado, circulando entre as \'areas no momento em que \'e necess\'aria.
 
+O prot\'otipo naveg\'avel das telas que ilustram esse cen\'ario est\'a dispon\'ivel, com permiss\~ao de visualiza\c{c}\~ao, em: \href{https://www.figma.com/proto/UnsN2hce1k4KrknhDKC4pH/Horizonte-360-Prototipo?node-id=0-1&t=61Jzl2soGHWPf1rG-1}{Prot\'otipo Horizonte 360 no Figma}.
+
 \subsection{Quest\~oes t\'ecnicas}
 
 Do ponto de vista tecnol\'ogico, a solu\c{c}\~ao se apoia em quatro camadas, coerentes com a ideia de sistema integrado apresentada na disciplina, por\'em sem a substitui\c{c}\~ao total que um ERP tradicional exigiria.
@@ -178,6 +186,8 @@ Do ponto de vista tecnol\'ogico, a solu\c{c}\~ao se apoia em quatro camadas, coe
 
 \textbf{Camada de aplica\c{c}\~ao.} Comporta o painel de decis\~ao de cr\'edito, a vis\~ao de atendimento e o motor de regras que gera as recomenda\c{c}\~oes. Para os pain\'eis gerenciais, integra-se uma ferramenta de Business Intelligence.
 
+\textbf{Hardware.} N\~ao h\'a compra de servidores pr\'oprios. O processamento e o armazenamento s\~ao provisionados de forma el\'astica em nuvem, e os colaboradores acessam a plataforma pelo navegador nos equipamentos que j\'a utilizam. Isso reduz o custo inicial e o prazo de implanta\c{c}\~ao.
+
 \textbf{Infraestrutura.} A opera\c{c}\~ao em nuvem \'e adequada ao volume de cerca de tr\^es milh\~oes de clientes, por oferecer escalabilidade de processamento e de armazenamento, al\'em de disponibilidade e conectividade compat\'iveis com um banco digital cujo canal principal \'e o aplicativo. Ainda que a seguran\c{c}a n\~ao seja o foco do projeto, a prote\c{c}\~ao dos dados pessoais \'e obrigat\'oria: criptografia em tr\^ansito e em repouso, controle de acesso por perfil de usu\'ario e ader\^encia \`a Lei Geral de Prote\c{c}\~ao de Dados [2] s\~ao requisitos t\'ecnicos inegoci\'aveis. A qualidade dos dados depende de mecanismos de deduplica\c{c}\~ao e de um cat\'alogo com defini\c{c}\~oes comuns, para que o mesmo dado tenha o mesmo significado em todas as \'areas.
 
 \textbf{Hardware, armazenamento e conectividade.} Por operar em nuvem, o banco n\~ao precisa investir em servidores pr\'oprios para sustentar a plataforma, e sim contratar capacidade de processamento e de armazenamento sob demanda, o que dilui o custo inicial e acompanha o crescimento da base de clientes. O armazenamento combina um banco de dados relacional, que sustenta a vis\~ao consolidada usada no dia a dia, e um reposit\'orio anal\'itico, que alimenta os pain\'eis gerenciais, ambos submetidos a pol\'iticas de reten\c{c}\~ao e de backup que preservam o hist\'orico de decis\~oes. A conectividade se apoia em APIs seguras entre a plataforma e os sistemas de origem, e a alta disponibilidade \'e um requisito de fato, j\'a que a an\'alise de cr\'edito e o atendimento passam a depender da plataforma ao longo do hor\'ario comercial e, no que toca ao aplicativo, em tempo integral.
@@ -186,7 +196,7 @@ Do ponto de vista tecnol\'ogico, a solu\c{c}\~ao se apoia em quatro camadas, coe
 
 A ado\c{c}\~ao da Horizonte 360 depende de mudan\c{c}as que v\~ao al\'em da tecnologia. A mais importante \'e a institui\c{c}\~ao de uma \textbf{governan\c{c}a de dados}. \'E necess\'ario definir quem \'e respons\'avel por cada conjunto de informa\c{c}\~ao, padronizar defini\c{c}\~oes (o que conta como renda, como se classifica uma reclama\c{c}\~ao) e estabelecer regras de qualidade e atualiza\c{c}\~ao. Sem isso, a vis\~ao \'unica apenas re\'une dados inconsistentes em um lugar s\'o.
 
-O \textbf{processo de concess\~ao de cr\'edito} precisa ser revisto para que as etapas de cadastro, an\'alise e decis\~ao passem a compartilhar a mesma base, em vez de operar em sequ\^encia isolada. Isso exige redefinir pap\'eis e responsabilidades e criar, ainda que de forma enxuta, uma \'area ou comit\^e de dados que coordene a iniciativa. Em termos de recursos, o projeto demanda uma equipe de integra\c{c}\~ao, profissionais de an\'alise de dados e, sobretudo, patroc\'inio da diretoria, pois se trata de uma decis\~ao organizacional, e n\~ao de uma escolha restrita \`a \'area de tecnologia.
+O \textbf{processo de concess\~ao de cr\'edito} precisa ser revisto para que as etapas de cadastro, an\'alise e decis\~ao passem a compartilhar a mesma base, em vez de operar em sequ\^encia isolada. Isso exige redefinir pap\'eis e responsabilidades e criar, ainda que de forma enxuta, uma \'area ou comit\^e de dados que coordene a iniciativa. Em termos de recursos, o projeto demanda uma equipe de integra\c{c}\~ao, profissionais de an\'alise de dados e, sobretudo, patroc\'inio da diretoria, pois se trata de uma decis\~ao organizacional, e n\~ao de uma escolha restrita \`a \'area de tecnologia. A ado\c{c}\~ao tamb\'em exige um plano de treinamento das equipes de cr\'edito e atendimento na nova ferramenta, para que confiem na informa\c{c}\~ao consolidada e a incorporem \`a rotina.
 
 Entre as barreiras previs\'iveis est\'a a resist\^encia das \'areas acostumadas aos silos, em especial a de risco, que hoje domina suas planilhas e pode ver a mudan\c{c}a como perda de controle. H\'a tamb\'em a depend\^encia do fornecedor terceirizado de cr\'edito, que precisa disponibilizar acesso a seus dados por meio de integra\c{c}\~ao, o que envolve negocia\c{c}\~ao contratual. Somam-se a esses pontos os riscos usuais de projetos de integra\c{c}\~ao: a dificuldade de conectar sistemas legados, a qualidade incerta dos dados antigos, o custo e o prazo. A gest\~ao da mudan\c{c}a, com comunica\c{c}\~ao clara dos ganhos e envolvimento das \'areas desde o in\'icio, \'e o principal instrumento para reduzir esses riscos.
 
@@ -254,19 +264,24 @@ A tabela abaixo sintetiza essa leitura e antecipa onde a solu\c{c}\~ao gera valo
 \centering
 \small
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{3.2cm}p{5.0cm}p{4.4cm}@{}}
-\toprule
+\begin{tabular}{|p{3.6cm}|p{5.7cm}|p{5.2cm}|}
+\hline
 \textbf{Atividade (Porter)} & \textbf{Correspond\^encia no Banco Horizonte} & \textbf{Impacto da Horizonte 360}\\
-\midrule
+\hline
 Log\'istica interna & Cadastro e onboarding de clientes e dados & Dados confi\'aveis alimentam a decis\~ao\\
+\hline
 Opera\c{c}\~oes & An\'alise e concess\~ao de cr\'edito & Decis\~ao mais r\'apida e consistente\\
+\hline
 Log\'istica externa & Entrega de produtos financeiros no aplicativo & Libera\c{c}\~ao \'agil ap\'os a aprova\c{c}\~ao\\
+\hline
 Marketing e vendas & Oferta e precifica\c{c}\~ao de produtos & Ofertas guiadas pelo hist\'orico do cliente\\
+\hline
 Servi\c{c}os & Atendimento e p\'os-venda & Explica\c{c}\~oes claras e menos tempo de resposta\\
-\midrule
+\hline
 Infraestrutura & Tecnologia e governan\c{c}a de dados & Ativo de integra\c{c}\~ao reutiliz\'avel\\
+\hline
 Desenvolvimento tecnol\'ogico & Constru\c{c}\~ao dos sistemas e da plataforma & Base para integra\c{c}\~oes futuras\\
-\bottomrule
+\hline
 \end{tabular}
 \end{table}
 
@@ -286,9 +301,8 @@ Para tornar esses resultados verific\'aveis, o banco pode acompanhar indicadores
 
 Conv\'em, por fim, reconhecer os trade-offs. A solu\c{c}\~ao aumenta a depend\^encia de fornecedores externos, exige investimento e prazo de implanta\c{c}\~ao, imp\~oe cuidados permanentes de privacidade sob a LGPD e traz o risco de excesso de confian\c{c}a na recomenda\c{c}\~ao autom\'atica, motivo pelo qual a decis\~ao final permanece com o analista humano. Reconhecer esses limites \'e o que torna a proposta cr\'ivel e realista para um banco de m\'edio porte.
 
-% ---- Nota de IA (nao numerada, mas listada no Sumario) ----
-\section*{Nota sobre o uso de ferramentas de Intelig\^encia Artificial}
-\addcontentsline{toc}{section}{Nota sobre o uso de ferramentas de Intelig\^encia Artificial}
+% ---- Nota de IA (secao 5, numerada) ----
+\section{Nota sobre o uso de ferramentas de Intelig\^encia Artificial}
 
 Em conformidade com a exig\^encia de transpar\^encia do enunciado, o grupo registra que ferramentas de Intelig\^encia Artificial foram utilizadas como apoio nas seguintes etapas: organiza\c{c}\~ao da estrutura do texto conforme o roteiro do projeto, revis\~ao de reda\c{c}\~ao e infograma, coes\~ao, melhora da escrita e apoio \`a sistematiza\c{c}\~ao das ideias discutidas pelo grupo, dando feedbacks sobre pontos de melhoria. Al\'em disso, a Intelig\^encia Artificial foi usada no desenvolvimento do prot\'otipo, por meio do MCP do Figma para utilizar agentes de IA que auxiliassem e fornecessem apoio no desenvolvimento das telas da plataforma Horizonte 360. A defini\c{c}\~ao do problema, o recorte de escopo, as decis\~oes de solu\c{c}\~ao e a valida\c{c}\~ao do conte\'udo \`a luz do material da disciplina foram conduzidas pelos integrantes.
 
